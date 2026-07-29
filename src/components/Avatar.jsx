@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Avatar() {
+function Avatar({src, alt, className}) {
   return (
-    <div>Avatar</div>
+    <div>
+      <img className={`w-full object-cover ${className}`} src={src} alt={alt} />
+    </div>
   )
 }
 

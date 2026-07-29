@@ -6,12 +6,7 @@ import Footer from "./Footer/Footer";
 function App() {
   return (
     <>
-      <Header />
-      <div className="flex gap-5">
-        <Dashboard />
-        <Outlet />
-      </div>
-      <Footer />
+      <Outlet />
     </>
   );
 }

@@ -6,9 +6,9 @@ function Header() {
     <nav>
       <ul>
         <NavLink to="/settings">Settings</NavLink>
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink to="/sidebar">Sidebar</NavLink>
         <NavLink to="/patients">Patients</NavLink>
-        <NavLink to="/patients/new">M-Patinets</NavLink>
+        <NavLink to="/patients/new">M-Patients</NavLink>
       </ul>
     </nav>
   );

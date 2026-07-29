@@ -12,6 +12,7 @@ import ModifyDoctors from "./pages/doctors/ModifyDoctors.jsx";
 import ListAppointments from "./pages/appointments/ListAppointments.jsx";
 import M_Appointments from "./pages/appointments/M_Appointments.jsx";
 import Settings from "./pages/Settings.jsx";
+import Sidebar from "./pages/Sidebar.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,21 +21,26 @@ const router = createBrowserRouter([
     children: [
       //Login:
       { index: true, element: <Login /> },
-      { path: "dashboard", element: <Dashboard /> },
-      // Patients:
-      { path: "patients", element: <ListPatients /> },
-      { path: "patients/new", element: <ModifyPatients /> },
-      { path: "patients/edit/:id", element: <ModifyPatients /> },
-      //Doctor:
-      { path: "doctors", element: <ListDoctors /> },
-      { path: "doctors/new", element: <ModifyDoctors /> },
-      { path: "doctors/edit/:id", element: <ModifyDoctors /> },
-      //Appointments:
-      { path: "appointments", element: <ListAppointments /> },
-      { path: "appointments/new", element: <M_Appointments /> },
-      { path: "appointments/edit/:id", element: <M_Appointments /> },
-      //Settings:
-      { path: "settings", element: <Settings /> },
+      {
+        element: <Dashboard />,
+        children: [
+          { path: "sidebar", element: <Sidebar /> },
+          // Patients:
+          { path: "patients", element: <ListPatients /> },
+          { path: "patients/new", element: <ModifyPatients /> },
+          { path: "patients/edit/:id", element: <ModifyPatients /> },
+          //Doctor:
+          { path: "doctors", element: <ListDoctors /> },
+          { path: "doctors/new", element: <ModifyDoctors /> },
+          { path: "doctors/edit/:id", element: <ModifyDoctors /> },
+          //Appointments:
+          { path: "appointments", element: <ListAppointments /> },
+          { path: "appointments/new", element: <M_Appointments /> },
+          { path: "appointments/edit/:id", element: <M_Appointments /> },
+          //Settings:
+          { path: "settings", element: <Settings /> },
+        ],
+      },
     ],
   },
 ]);
