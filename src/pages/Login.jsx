@@ -24,7 +24,7 @@ function Login() {
     console.log(formData);
 
     const response = await fetch(
-      `http://localhost:3000/users?email=${formData.email}&password=${formData.password}`,
+      `http://localhost:3000/users`,
     );
 
     if (!response.ok) {
