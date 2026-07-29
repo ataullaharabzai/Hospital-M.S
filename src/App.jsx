@@ -1,12 +1,17 @@
-import "./App.css";
-import { House, User, Calendar, Stethoscope } from "lucide-react";
+import { Outlet } from "react-router-dom";
+import Header from "./Header/Header";
+import Dashboard from "./pages/Dashboard";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
     <>
-      <h1>
-        Hello Afghanistan <User className="p-2 rounded-full m-5 bg-blue-500 text-gray-100" size={44} />
-      </h1>
+      <Header />
+      <div className="flex gap-5">
+        <Dashboard />
+        <Outlet />
+      </div>
+      <Footer />
     </>
   );
 }
