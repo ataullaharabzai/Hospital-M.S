@@ -1,9 +1,16 @@
 import React from "react";
 
-function Button({ text, onClick, type = "button", className, ...rest }) {
+function Button({
+  text,
+  children,
+  onClick,
+  type = "button",
+  className,
+  ...rest
+}) {
   return (
     <button type={type} onClick={onClick} className={className} {...rest}>
-      {text}
+      {children ? children : text}
     </button>
   );
 }

@@ -7,7 +7,7 @@ function Input({ className, type, value, onChange, name }) {
         type={type}
         value={value}
         onChange={onChange}
-        className={className}
+        className={`focus:outline-0 focus:border-2 focus:border-blue-700 ${className}`}
         name={name}
       />
     </div>

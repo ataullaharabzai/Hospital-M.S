@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../api.js";
 import Button from "../components/Button.jsx";
+import { LogIn } from "lucide-react";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -54,12 +55,12 @@ function Login() {
   };
 
   return (
-    <main className="flex justify-around p-1 bg-gray-300">
+    <main className="h-screen flex justify-evenly items-center bg-gray-100">
       {/* Thumbnail section */}
-      <section className="left-side-thumbnail w-1/2">
+      <section className="left-side-thumbnail w-1/3">
         <div className="flex justify-center items-center flex-col">
-          <Avatar src={hero} alt={"Hero Image"} className={``} />
-          <div className="bg-blue-700 p-3 text-white text-center w-full flex justify-center items-center flex-col gap-3">
+          <Avatar src={hero} alt={"Hero Image"} className={`rounded-t-2xl`} />
+          <div className="bg-blue-700 p-3 text-white text-center w-full flex justify-center items-center flex-col gap-3 rounded-b-2xl">
             <h1 className="text-3xl font-bold">MediCar</h1>
             <div className="w-1/2 bg-blue-800 p-3 border-l-2 text-[14px] text-left rounded-r-sm">
               <p>
@@ -74,28 +75,31 @@ function Login() {
       </section>
 
       {/* Login Form section */}
-      <section className="w-1/2 flex justify-center items-center">
+      <section className="w-1/3 flex justify-center items-center">
         <div className="p-2 flex justify-center items-start flex-col gap-5">
-          <h1 className="md:text-2xl font-semibold text-blue-600">Medicare</h1>
+          <h1 className="md:text-2xl font-semibold text-blue-700">Medicare</h1>
           <div>
             <h1 className="md:text-[20px] font-semibold">Login</h1>
             <p className="text-[12px] md:text-[14px] text-gray-500">
               Enter your credentials to login to your account
             </p>
           </div>
-          <form onSubmit={handleSubmit} className="bg-amber-200 w-full flex justify-center items-start gap-2 flex-col">
-            <div>
-              <label>Email</label>
+          <form
+            onSubmit={handleSubmit}
+            className="w-full flex justify-center items-start gap-3 flex-col"
+          >
+            <div className="w-full">
+              <label className="text-[12px] md:text-[14px]">Email</label>
               <Input
                 type={"email"}
-                className={`border p-1 rounded-sm border-gray-500`}
+                className={`border w-full p-1 rounded-sm border-gray-500`}
                 value={formData.email}
                 onChange={handleChange}
                 name={`email`}
               />
             </div>
-            <div>
-              <label className="">Password</label>
+            <div className="w-full">
+              <label className="text-[12px] md:text-[14px]">Password</label>
               <Input
                 type={"password"}
                 className={`border w-full p-1 rounded-sm border-gray-500`}
@@ -106,9 +110,11 @@ function Login() {
             </div>
             <Button
               type={"submit"}
-              text={"Login"}
-              className={`bg-blue-500 p-5`}
-            />
+              className={`w-full bg-blue-700 p-1.5 rounded-sm text-white flex items-center justify-center gap-2`}
+            >
+              Sign In
+              <LogIn className="h-4 w-4" />
+            </Button>
           </form>
         </div>
       </section>
