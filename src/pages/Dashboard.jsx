@@ -1,18 +1,10 @@
 import React from "react";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import { Outlet } from "react-router-dom";
-import Sidebar from "./Sidebar";
 
 function Dashboard() {
   return (
-    <div>
-      <Header />
-      <div className="flex gap-5">
-        <Sidebar />
-        <Outlet />
-      </div>
-      <Footer />
+    <div className="space-y-4">
+      <h1 className="text-2xl font-semibold text-slate-900">Admin Dashboard</h1>
+      
     </div>
   );
 }

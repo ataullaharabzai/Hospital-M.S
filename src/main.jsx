@@ -13,6 +13,7 @@ import ListAppointments from "./pages/appointments/ListAppointments.jsx";
 import M_Appointments from "./pages/appointments/M_Appointments.jsx";
 import Settings from "./pages/Settings.jsx";
 import Sidebar from "./pages/Sidebar.jsx";
+import DashboardLayout from "./pages/DashboardLayout.jsx";
 import '@fontsource/poppins'; // Defaults to weight 400
 import '@fontsource/poppins/700.css'; // Optional: Import bold weight
 
@@ -25,9 +26,9 @@ const router = createBrowserRouter([
       //Login:
       { index: true, element: <Login /> },
       {
-        element: <Dashboard />,
+        element: <DashboardLayout />,
         children: [
-          { path: "sidebar", element: <Sidebar /> },
+          { path: "sidebar", element: <Dashboard /> },
           // Patients:
           { path: "patients", element: <ListPatients /> },
           { path: "patients/new", element: <ModifyPatients /> },
