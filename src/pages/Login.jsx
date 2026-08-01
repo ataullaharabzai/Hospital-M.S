@@ -17,6 +17,14 @@ function Login() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const loginAsGuest = () => {
+    setFormData({
+      ...formData,
+      email: "admin@medicare.com",
+      password: "123456",
+    });
+  };
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -78,6 +86,7 @@ function Login() {
             <div className="w-full">
               <label className="text-[12px] md:text-[14px]">Email</label>
               <Input
+                placeholder={`admin@example.com`}
                 type={"email"}
                 className={`border w-full p-1.5 rounded-sm border-gray-500`}
                 value={formData.email}
@@ -95,13 +104,24 @@ function Login() {
                 name={`password`}
               />
             </div>
-            <Button
-              type={"submit"}
-              className={`w-full border-2 border-blue-700 hover:bg-blue-700 hover:text-white transition-all p-1.5 rounded-sm flex items-center justify-center gap-2 cursor-pointer`}
-            >
-              Sign In
-              <LogIn className="h-4 w-4" />
-            </Button>
+            <div className="w-full flex flex-col gap-3 mt-5">
+              <Button
+                type={"submit"}
+                className={`w-full border-2 border-blue-700 bg-blue-700 text-white hover:bg-blue-600 transition-all p-1.5 rounded-sm flex items-center justify-center gap-2 cursor-pointer`}
+              >
+                Sign In
+                <LogIn className="h-4 w-4" />
+              </Button>
+
+              <Button
+                onClick={loginAsGuest}
+                type={"submit"}
+                className={`w-full border-2 border-blue-700 bg-blue-700 text-white hover:bg-blue-600 transition-all p-1.5 rounded-sm flex items-center justify-center gap-2 cursor-pointer`}
+              >
+                Sign In as Guest
+                <LogIn className="h-4 w-4" />
+              </Button>
+            </div>
           </form>
         </div>
       </section>

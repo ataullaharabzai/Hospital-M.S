@@ -1,13 +1,14 @@
 import React from "react";
 
-function Input({ className, type, value, onChange, name }) {
+function Input({ className, type, value, onChange, name, placeholder }) {
   return (
     <div>
       <input
+        placeholder={placeholder}
         type={type}
         value={value}
         onChange={onChange}
-        className={`focus:outline-0 focus:border-2 focus:border-blue-700 ${className}`}
+        className={`focus:outline-0 ${className}`}
         name={name}
       />
     </div>
