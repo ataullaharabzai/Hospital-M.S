@@ -13,6 +13,9 @@ import ListAppointments from "./pages/appointments/ListAppointments.jsx";
 import M_Appointments from "./pages/appointments/M_Appointments.jsx";
 import Settings from "./pages/Settings.jsx";
 import Sidebar from "./pages/Sidebar.jsx";
+import '@fontsource/poppins'; // Defaults to weight 400
+import '@fontsource/poppins/700.css'; // Optional: Import bold weight
+
 
 const router = createBrowserRouter([
   {

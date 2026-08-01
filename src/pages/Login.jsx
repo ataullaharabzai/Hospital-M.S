@@ -55,7 +55,7 @@ function Login() {
   };
 
   return (
-    <main className="min-h-screen flex justify-evenly items-center bg-gray-100">
+    <main className="flex justify-evenly items-center bg-gray-100">
       {/* Thumbnail section */}
       <section className="hidden lg:block left-side-thumbnail w-1/2">
         <Avatar src={hero} alt={`Hero Image`} className={`w-full h-screen`} />
