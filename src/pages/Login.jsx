@@ -57,25 +57,12 @@ function Login() {
   return (
     <main className="h-screen flex justify-evenly items-center bg-gray-100">
       {/* Thumbnail section */}
-      <section className="left-side-thumbnail w-1/3">
-        <div className="flex justify-center items-center flex-col">
-          <Avatar src={hero} alt={"Hero Image"} className={`rounded-t-2xl`} />
-          <div className="bg-blue-700 p-3 text-white text-center w-full flex justify-center items-center flex-col gap-3 rounded-b-2xl">
-            <h1 className="text-3xl font-bold">MediCar</h1>
-            <div className="w-1/2 bg-blue-800 p-3 border-l-2 text-[14px] text-left rounded-r-sm">
-              <p>
-                Welcome to{" "}
-                <span className="text-[20px] font-bold">MediCare</span>{" "}
-                <span>Hospital Management System </span>cloud based streamline
-                Management System
-              </p>
-            </div>
-          </div>
-        </div>
+      <section className="left-side-thumbnail w-1/2">
+        <Avatar src={hero} alt={`Hero Image`} className={`w-full h-screen`} />
       </section>
 
       {/* Login Form section */}
-      <section className="w-1/3 flex justify-center items-center">
+      <section className="w-1/2 flex justify-center items-center">
         <div className="p-2 flex justify-center items-start flex-col gap-5">
           <h1 className="md:text-2xl font-semibold text-blue-700">Medicare</h1>
           <div>
@@ -110,7 +97,7 @@ function Login() {
             </div>
             <Button
               type={"submit"}
-              className={`w-full bg-blue-700 p-1.5 rounded-sm text-white flex items-center justify-center gap-2`}
+              className={`w-full bg-blue-700 p-1.5 rounded-sm text-white flex items-center justify-center gap-2 cursor-pointer`}
             >
               Sign In
               <LogIn className="h-4 w-4" />
