@@ -19,6 +19,8 @@ function Dashboard() {
             name={`Available Doctors`}
             counter={doctors.length}
             percentage={`+91%`}
+            iconColor="bg-blue-100 text-blue-600"
+            percentageColor="bg-emerald-600"
           />
         </div>
         <div>
@@ -27,6 +29,8 @@ function Dashboard() {
             name={`Available Patients`}
             counter={doctors.length}
             percentage={`+84%`}
+            iconColor="bg-violet-100 text-violet-600"
+            percentageColor="bg-emerald-600"
           />
         </div>
         <div>
@@ -35,14 +39,18 @@ function Dashboard() {
             name={`Appointments`}
             counter={doctors.length}
             percentage={`-19%`}
+            iconColor="bg-amber-100 text-amber-600"
+            percentageColor="bg-rose-600"
           />
         </div>
         <div>
           <StateCard
             icon={HeartPlus}
-            name={`Available Doctors`}
+            name={`Patient Care`}
             counter={doctors.length}
             percentage={`+61%`}
+            iconColor="bg-rose-100 text-rose-600"
+            percentageColor="bg-emerald-600"
           />
         </div>
       </div>
