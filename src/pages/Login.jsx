@@ -55,14 +55,14 @@ function Login() {
   };
 
   return (
-    <main className="h-screen flex justify-evenly items-center bg-gray-100">
+    <main className="min-h-screen flex justify-evenly items-center bg-gray-100">
       {/* Thumbnail section */}
-      <section className="left-side-thumbnail w-1/2">
+      <section className="hidden lg:block left-side-thumbnail w-1/2">
         <Avatar src={hero} alt={`Hero Image`} className={`w-full h-screen`} />
       </section>
 
       {/* Login Form section */}
-      <section className="w-1/2 flex justify-center items-center">
+      <section className="h-screen w-full lg:w-1/2 flex justify-center items-center bg-[radial-gradient(circle_at_top_left,_#dbeafe,_#f8fafc_45%,_#e2e8f0)]">
         <div className="p-2 flex justify-center items-start flex-col gap-5">
           <h1 className="md:text-2xl font-semibold text-blue-700">Medicare</h1>
           <div>
@@ -79,7 +79,7 @@ function Login() {
               <label className="text-[12px] md:text-[14px]">Email</label>
               <Input
                 type={"email"}
-                className={`border w-full p-1 rounded-sm border-gray-500`}
+                className={`border w-full p-1.5 rounded-sm border-gray-500`}
                 value={formData.email}
                 onChange={handleChange}
                 name={`email`}
@@ -89,7 +89,7 @@ function Login() {
               <label className="text-[12px] md:text-[14px]">Password</label>
               <Input
                 type={"password"}
-                className={`border w-full p-1 rounded-sm border-gray-500`}
+                className={`border w-full p-1.5 rounded-sm border-gray-500`}
                 value={formData.password}
                 onChange={handleChange}
                 name={`password`}
@@ -97,7 +97,7 @@ function Login() {
             </div>
             <Button
               type={"submit"}
-              className={`w-full bg-blue-700 p-1.5 rounded-sm text-white flex items-center justify-center gap-2 cursor-pointer`}
+              className={`w-full border-2 border-blue-700 hover:bg-blue-700 hover:text-white transition-all p-1.5 rounded-sm flex items-center justify-center gap-2 cursor-pointer`}
             >
               Sign In
               <LogIn className="h-4 w-4" />
