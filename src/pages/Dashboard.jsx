@@ -3,6 +3,7 @@ import { getDoctors, getPatients, getNurses, getAppointments } from "../api.js";
 import StateCard from "../components/StateCard.jsx";
 import { UserPlus, UsersRound, ClipboardClock, HeartPlus } from "lucide-react";
 import PopularCards from "../components/PopularCards.jsx";
+import Table from "../components/Table.jsx";
 
 function Dashboard() {
   const [doctors, setDoctors] = useState([]);
@@ -79,11 +80,11 @@ function Dashboard() {
       {/* Popular Doctors section */}
 
       <section>
-        <div className="w-full border">
-          <h1 className="text-2xl font-semibold text-slate-800">
+        <div className="w-full p-2 shadow shadow-gray-400 mt-10 rounded-sm">
+          <h1 className="lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4">
             Popular Doctors
           </h1>
-          <div className="grid grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
             {doctors.map((doctor) => (
               <div key={doctor.id}>
                 <PopularCards
@@ -91,7 +92,39 @@ function Dashboard() {
                   name={doctor.name}
                   profession={doctor.specialization}
                   status={doctor.status}
-                  bookings={`12`}
+                  bookings={doctor.patients}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Appointments table section */}
+      <section>
+        <Table
+          appointments={appointments}
+          doctors={doctors}
+          patients={patients}
+        />
+      </section>
+
+      {/* Patients section */}
+
+      <section>
+        <div className="w-full p-2 shadow shadow-gray-400 mt-10 rounded-sm">
+          <h1 className="lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4">
+            Most recent patients
+          </h1>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+            {patients.map((patient) => (
+              <div key={patient.id}>
+                <PopularCards
+                  avatar={patient.image}
+                  name={patient.name}
+                  disease={patient.disease}
+                  phone={patient.phone}
+                  gender={patient.gender}
                 />
               </div>
             ))}
