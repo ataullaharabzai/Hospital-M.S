@@ -5,8 +5,24 @@ import { UserPlus, UsersRound, ClipboardClock, HeartPlus } from "lucide-react";
 
 function Dashboard() {
   const [doctors, setDoctors] = useState([]);
+  const [patients, setPatients] = useState([]);
+  const [appointments, setAppointments] = useState([]);
+  const [nurses, setNurses] = useState([]);
+
   useEffect(() => {
     getDoctors().then(setDoctors);
+  }, []);
+
+  useEffect(() => {
+    getPatients().then(setPatients);
+  }, []);
+
+  useEffect(() => {
+    getAppointments().then(setAppointments);
+  }, []);
+
+  useEffect(() => {
+    getNurses().then(setNurses);
   }, []);
 
   return (
@@ -27,7 +43,7 @@ function Dashboard() {
           <StateCard
             icon={UsersRound}
             name={`Available Patients`}
-            counter={doctors.length}
+            counter={patients.length}
             percentage={`+84%`}
             iconColor="bg-violet-100 text-violet-600"
             percentageColor="bg-emerald-600"
@@ -37,7 +53,7 @@ function Dashboard() {
           <StateCard
             icon={ClipboardClock}
             name={`Appointments`}
-            counter={doctors.length}
+            counter={appointments.length}
             percentage={`-19%`}
             iconColor="bg-amber-100 text-amber-600"
             percentageColor="bg-rose-600"
@@ -46,8 +62,8 @@ function Dashboard() {
         <div>
           <StateCard
             icon={HeartPlus}
-            name={`Patient Care`}
-            counter={doctors.length}
+            name={`Available Nurses`}
+            counter={nurses.length}
             percentage={`+61%`}
             iconColor="bg-rose-100 text-rose-600"
             percentageColor="bg-emerald-600"

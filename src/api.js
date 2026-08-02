@@ -9,9 +9,9 @@ export const getPatients = () => {
 };
 
 export const getAppointments = () => {
-  return fetch(`${API_URL}/appointments`).then((res) => res.json);
+  return fetch(`${API_URL}/appointments`).then((res) => res.json());
 };
 
 export const getNurses = () => {
-  return fetch(`${API_URL}/nurses`).then((res) => res.json);
+  return fetch(`${API_URL}/nurses`).then((res) => res.json());
 };

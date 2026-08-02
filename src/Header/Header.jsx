@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from '../images/logo4.avif'
+import logo from "../images/logo4.avif";
 import Avatar from "../components/Avatar";
 import Button from "../components/Button";
+import { Moon, Settings } from "lucide-react";
 
 function Header() {
   return (
@@ -13,12 +14,23 @@ function Header() {
           <h1 className="text-2xl font-semibold">Medicare</h1>
         </div>
         <ul className="w-1/3 flex justify-center items-center gap-7 font-semibold">
-          <NavLink><li>Doctors</li></NavLink>
-          <NavLink><li>Appointments</li></NavLink>
-          <NavLink><li>Patients</li></NavLink>
+          <NavLink>
+            <li>Doctors</li>
+          </NavLink>
+          <NavLink>
+            <li>Appointments</li>
+          </NavLink>
+          <NavLink>
+            <li>Patients</li>
+          </NavLink>
         </ul>
         <div className="w-1/3 flex justify-center items-center">
-          <Button text={`Theme`} className={`border p-1`} />
+          <Button>
+            <Moon />
+          </Button>
+          <Button>
+            <Settings />
+          </Button>
         </div>
       </nav>
     </header>
