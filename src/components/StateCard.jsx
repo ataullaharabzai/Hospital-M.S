@@ -15,7 +15,7 @@ function StateCard({
     : percentageColor || "bg-rose-600";
 
   return (
-    <div className="rounded-lg w-full border border-slate-200 bg-white p-4 shadow-sm hover:border-sky-600 transition-all">
+    <div className="rounded-lg w-full border border-slate-200 bg-white p-4 shadow-sm hover:border-sky-500 transition-all">
       <div className="flex items-center justify-between">
         <div
           className={`rounded-xl p-3 ${iconColor || "bg-sky-100 text-sky-600"}`}
