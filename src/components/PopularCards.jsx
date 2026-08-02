@@ -43,7 +43,11 @@ function PopularCards({
       </div>
       <div className="text-[10px] lg:text-[12px] flex justify-around items-center gap-2 w-full">
         <p className={statusClassName}>{status || phone}</p>
-        <p className="text-slate-700">Bookings: {bookings}</p>
+        <p className="text-slate-700">
+          {bookings !== undefined
+            ? `Bookings: ${bookings}`
+            : `Gender: ${gender}`}
+        </p>
       </div>
     </div>
   );
