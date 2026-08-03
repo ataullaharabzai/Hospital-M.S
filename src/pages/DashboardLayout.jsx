@@ -9,17 +9,19 @@ function DashboardLayout() {
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
       <Header />
 
-      <div className="flex flex-1">
-        <aside className="w-64 shrink-0 border-r border-slate-200 text-white">
+      <div className="flex flex-1 overflow-hidden">
+        <aside className="hidden lg:block lg:w-64 lg:shrink-0 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto border-r border-slate-200 bg-white">
           <Sidebar />
         </aside>
 
-        <main className="flex-1 p-6 bg-slate-50">
-          <Outlet />
+        <main className="flex-1 overflow-x-hidden p-4 sm:p-6 lg:p-8">
+          <div className="mx-auto max-w-7xl">
+            <Outlet />
+          </div>
         </main>
       </div>
 
-      <Footer />
+      <Footer /> 
     </div>
   );
 }
