@@ -10,7 +10,7 @@ function DashboardLayout() {
       <Header />
 
       <div className="flex flex-1 overflow-hidden">
-        <aside className="hidden lg:block lg:w-64 lg:shrink-0 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto border-r border-slate-200 bg-white">
+        <aside className="hidden lg:block lg:w-64 lg:shrink-0 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto border-r border-slate-200 dark:border-gray-600 bg-white">
           <Sidebar />
         </aside>
 

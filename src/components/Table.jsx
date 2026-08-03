@@ -14,9 +14,9 @@ function Table({ appointments = [], doctors = [], patients = [] }) {
   };
 
   return (
-    <div className="w-full p-4 shadow shadow-slate-300 rounded-sm bg-white mt-10">
+    <div className="dark:bg-blue-950 w-full p-4 dark:shadow-none shadow shadow-slate-300 rounded-sm bg-white mt-10">
       <div className="mb-4">
-        <h2 className="text-lg font-semibold text-slate-800 flex gap-2 items-center">
+        <h2 className="dark:text-slate-100 text-lg font-semibold text-slate-800 flex gap-2 items-center">
           <div className="p-3 bg-green-200 text-green-700 rounded-xl">
             <ClipboardClock className="h-5 w-5" />
           </div>
@@ -26,7 +26,7 @@ function Table({ appointments = [], doctors = [], patients = [] }) {
       <div className="overflow-x-auto">
         <table className="min-w-full border-separate border-spacing-y-3">
           <thead>
-            <tr className="text-left text-sm tracking-wide text-slate-700">
+            <tr className="dark:text-slate-100 text-left text-sm tracking-wide text-slate-700">
               <th className="px-4 py-3">Doctor</th>
               <th className="px-4 py-3">Patient</th>
               <th className="px-4 py-3">Date &amp; Time</th>
@@ -43,7 +43,7 @@ function Table({ appointments = [], doctors = [], patients = [] }) {
                 "bg-slate-100 text-slate-700";
 
               return (
-                <tr key={appointment.id} className="bg-sky-50">
+                <tr key={appointment.id} className="bg-sky-50 dark:bg-slate-800">
                   <td className="px-4 py-4 align-top">
                     <div className="flex items-start gap-3">
                       <img
@@ -52,10 +52,10 @@ function Table({ appointments = [], doctors = [], patients = [] }) {
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div>
-                        <p className="font-semibold text-slate-800">
+                        <p className="font-semibold text-slate-800 dark:text-slate-100">
                           {doctor?.name || appointment.doctor}
                         </p>
-                        <p className="text-sm text-slate-500">
+                        <p className="text-sm text-slate-500 dark:text-slate-400">
                           {doctor?.specialization || appointment.department}
                         </p>
                       </div>
@@ -69,23 +69,23 @@ function Table({ appointments = [], doctors = [], patients = [] }) {
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div>
-                        <p className="font-semibold text-slate-800">
+                        <p className="font-semibold text-slate-800 dark:text-slate-100">
                           {patient?.name || appointment.patient}
                         </p>
-                        <p className="text-sm text-slate-500">
+                        <p className="text-sm text-slate-500 dark:text-slate-400">
                           {patient?.phone || "No phone"}
                         </p>
                       </div>
                     </div>
                   </td>
                   <td className="px-4 py-4 align-top">
-                    <p className="font-medium text-slate-800">
+                    <p className="font-medium text-slate-800 dark:text-slate-300">
                       {appointment.date}
                     </p>
-                    <p className="text-sm text-slate-500">{appointment.time}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-300">{appointment.time}</p>
                   </td>
                   <td className="px-4 py-4 align-top">
-                    <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+                    <span className="dark:bg-transparent dark:text-slate-300 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
                       {appointment.mode || "Online"}
                     </span>
                   </td>

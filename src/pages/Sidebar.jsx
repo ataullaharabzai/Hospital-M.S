@@ -19,8 +19,8 @@ const links = [
 
 function Sidebar() {
   return (
-    <div className="h-full p-5">
-      <h2 className="mb-6 text-xl font-semibold text-slate-700">
+    <div className="h-full p-5 dark:bg-blue-950">
+      <h2 className="mb-6 text-xl font-semibold text-slate-700 dark:text-slate-100">
         Hospital Menu
       </h2>
       <nav className="space-y-2">
@@ -32,7 +32,7 @@ function Sidebar() {
               `block rounded-lg px-3 py-2 text-sm font-medium transition ${
                 isActive
                   ? "bg-sky-600 text-white"
-                  : "text-slate-700 hover:bg-sky-100"
+                  : "text-slate-700 dark:text-slate-300 dark:hover:bg-sky-900 hover:bg-sky-100"
               }`
             }
           >

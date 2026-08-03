@@ -23,7 +23,7 @@ function PopularCards({
   const statusClassName = statusClasses[normalizedStatus] || "text-slate-700";
 
   return (
-    <div className="dark:bg-blue-950 p-3 flex justify-center items-start flex-col gap-4 rounded-lg bg-white shadow border border-transparent hover:border-sky-500 transition-all">
+    <div className="dark:bg-blue-950 p-3 flex justify-center items-start flex-col gap-4 rounded-lg bg-white shadow dark:shadow-none border border-transparent hover:border-sky-500 transition-all">
       <div className="flex justify-center items-center gap-2">
         <div>
           <img
