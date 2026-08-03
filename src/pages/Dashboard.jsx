@@ -43,7 +43,7 @@ function Dashboard() {
           </div>
           Admin Dashboard
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           <div>
             <StateCard
               icon={UserPlus}
@@ -97,7 +97,7 @@ function Dashboard() {
             </div>
             Popular Doctors
           </h1>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
             {doctors.map((doctor) => (
               <div key={doctor.id}>
                 <PopularCards
@@ -132,7 +132,7 @@ function Dashboard() {
             </div>
             Most recent patients
           </h1>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
             {patients.map((patient) => (
               <div key={patient.id}>
                 <PopularCards

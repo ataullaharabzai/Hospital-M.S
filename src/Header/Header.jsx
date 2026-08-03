@@ -4,11 +4,12 @@ import logo from "../images/logo4.avif";
 import Avatar from "../components/Avatar";
 import Button from "../components/Button";
 import { Moon, Settings, Menu, X } from "lucide-react";
+import profile from "../images/my_dark.jpeg";
 
 const navItems = [
-  { to: "/doctors", label: "Doctors" },
-  { to: "/appointments", label: "Appointments" },
-  { to: "/patients", label: "Patients" },
+  { to: "/sidebar", label: "Doctors" },
+  { to: "/sidebar", label: "Appointments" },
+  { to: "/sidebar", label: "Patients" },
 ];
 
 function Header() {
@@ -17,7 +18,7 @@ function Header() {
   return (
     <header className="w-full border-b border-slate-200 bg-white text-slate-700">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2">
           <Avatar src={logo} alt="Logo" className="w-12 h-12" />
           <h1 className="text-2xl font-semibold">Medicare</h1>
         </div>
@@ -28,9 +29,7 @@ function Header() {
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
-                `transition hover:text-slate-900 ${
-                  isActive ? "text-sky-600" : "text-slate-700"
-                }`
+                `transition hover:text-slate-900 ${isActive ? "" : ""}`
               }
             >
               {item.label}
@@ -38,16 +37,7 @@ function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
-          <div className="hidden md:flex items-center gap-2">
-            <Button>
-              <Moon />
-            </Button>
-            <Button>
-              <Settings />
-            </Button>
-          </div>
-
+        <div className="w-full md:w-auto flex justify-between items-center">
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:bg-slate-50 md:hidden"
@@ -60,6 +50,26 @@ function Header() {
               <Menu className="h-5 w-5" />
             )}
           </button>
+
+          <div className="flex items-center gap-3">
+            <Button
+              className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full`}
+            >
+              <Moon size={`15`} />
+            </Button>
+            <Button
+              className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full`}
+            >
+              <Settings size={`15`} />
+            </Button>
+            <div className="w-8 h-8">
+              <Avatar
+                src={profile}
+                alt={`User Profile`}
+                className={`rounded-full w-8 h-8`}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -74,9 +84,7 @@ function Header() {
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
                 `block rounded-lg px-3 py-2 text-sm font-medium transition ${
-                  isActive
-                    ? "bg-sky-600 text-white"
-                    : "text-slate-700 hover:bg-slate-100"
+                  isActive ? "" : ""
                 }`
               }
             >
