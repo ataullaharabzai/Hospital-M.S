@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 
 function DashboardLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+    <div className="dark:bg-slate-800 min-h-screen flex flex-col bg-slate-50 text-slate-800">
       <Header />
 
       <div className="flex flex-1 overflow-hidden">

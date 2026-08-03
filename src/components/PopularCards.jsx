@@ -23,7 +23,7 @@ function PopularCards({
   const statusClassName = statusClasses[normalizedStatus] || "text-slate-700";
 
   return (
-    <div className="p-3 flex justify-center items-start flex-col gap-4 rounded-lg bg-white shadow border border-slate-200 hover:border-sky-500 transition-all">
+    <div className="dark:bg-blue-950 p-3 flex justify-center items-start flex-col gap-4 rounded-lg bg-white shadow border border-transparent hover:border-sky-500 transition-all">
       <div className="flex justify-center items-center gap-2">
         <div>
           <img
@@ -33,17 +33,17 @@ function PopularCards({
           />
         </div>
         <div>
-          <h1 className="text-[14px] lg:text-[16px] text-slate-800 font-semibold">
+          <h1 className="dark:text-slate-100 text-[14px] lg:text-[16px] text-slate-800 font-semibold">
             {name}
           </h1>
-          <p className="text-[12px] lg:text-[14px] text-slate-600">
+          <p className="dark:text-slate-100 text-[12px] lg:text-[14px] text-slate-600">
             {profession || disease}
           </p>
         </div>
       </div>
       <div className="text-[10px] lg:text-[12px] flex justify-around items-center gap-2 w-full">
-        <p className={statusClassName}>{status || phone}</p>
-        <p className="text-slate-700">
+        <p className={`${statusClassName} `}>{status || phone}</p>
+        <p className="text-slate-700 dark:text-slate-100">
           {bookings !== undefined
             ? `Bookings: ${bookings}`
             : `Gender: ${gender}`}

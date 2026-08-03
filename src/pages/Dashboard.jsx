@@ -37,7 +37,7 @@ function Dashboard() {
   return (
     <main className="space-y-4">
       <section>
-        <h1 className="text-2xl font-semibold text-slate-800 flex gap-2 items-center mb-3">
+        <h1 className="dark:text-slate-100 text-2xl font-semibold text-slate-800 flex gap-2 items-center mb-3">
           <div className="p-3 bg-sky-200 text-sky-700 rounded-xl">
             <LayoutDashboard className="h-5 w-5" />
           </div>
@@ -91,7 +91,7 @@ function Dashboard() {
 
       <section>
         <div className="w-full p-2 shadow shadow-gray-400 mt-10 rounded-sm">
-          <h1 className="lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
+          <h1 className="dark:text-slate-100 lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
             <div className="p-3 bg-red-200 text-red-700 rounded-xl">
               <UserPlus className="h-5 w-5" />
             </div>
@@ -126,7 +126,7 @@ function Dashboard() {
 
       <section>
         <div className="w-full p-2 shadow shadow-gray-400 mt-10 rounded-sm">
-          <h1 className="lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
+          <h1 className="dark:text-slate-100 lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
             <div className="p-3 bg-violet-200 text-violet-700 rounded-xl">
               <UsersRound className="h-5 w-5" />
             </div>

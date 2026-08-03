@@ -3,8 +3,9 @@ import { NavLink } from "react-router-dom";
 import logo from "../images/logo4.avif";
 import Avatar from "../components/Avatar";
 import Button from "../components/Button";
-import { Moon, Settings, Menu, X } from "lucide-react";
+import { Moon, Settings, Menu, X, Sun } from "lucide-react";
 import profile from "../images/my_dark.jpeg";
+import { useTheme } from "../contexts/ThemeProvider";
 
 const navItems = [
   { to: "/sidebar", label: "Doctors" },
@@ -14,6 +15,7 @@ const navItems = [
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { toggleTheme, darkMode } = useTheme();
 
   return (
     <header className="w-full border-b border-slate-200 bg-white text-slate-700">
@@ -26,7 +28,7 @@ function Header() {
         <nav className="hidden md:flex items-center gap-8 font-semibold text-slate-700">
           {navItems.map((item) => (
             <NavLink
-              key={item.to}
+              key={item.label}
               to={item.to}
               className={({ isActive }) =>
                 `transition hover:text-slate-900 ${isActive ? "" : ""}`
@@ -53,9 +55,10 @@ function Header() {
 
           <div className="flex items-center gap-3">
             <Button
+              onClick={toggleTheme}
               className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full`}
             >
-              <Moon size={`15`} />
+              {darkMode ? <Sun size={`15`}/> : <Moon size={`15`} />}
             </Button>
             <Button
               className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full`}
@@ -79,7 +82,7 @@ function Header() {
         <nav className="space-y-1 border-t border-slate-200 bg-slate-50 px-4 py-4">
           {navItems.map((item) => (
             <NavLink
-              key={item.to}
+              key={item.label}
               to={item.to}
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>

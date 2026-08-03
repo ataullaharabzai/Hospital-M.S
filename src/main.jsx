@@ -14,9 +14,9 @@ import M_Appointments from "./pages/appointments/M_Appointments.jsx";
 import Settings from "./pages/Settings.jsx";
 import Sidebar from "./pages/Sidebar.jsx";
 import DashboardLayout from "./pages/DashboardLayout.jsx";
-import '@fontsource/poppins'; // Defaults to weight 400
-import '@fontsource/poppins/700.css'; // Optional: Import bold weight
-
+import "@fontsource/poppins"; // Defaults to weight 400
+import "@fontsource/poppins/700.css"; // Optional: Import bold weight
+import ThemeProvider from "./contexts/ThemeProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +51,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );
