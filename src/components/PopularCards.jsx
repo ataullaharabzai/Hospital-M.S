@@ -16,7 +16,7 @@ function PopularCards({
     "on leave":
       "text-red-700 bg-red-100 px-2 py-1 rounded border border-red-500",
     available:
-      "text-emerald-700 px-2 p-1 rounded bg-emerald-200 border border-emerald-600",
+      "text-emerald-700 px-2 p-1 rounded bg-emerald-100 border border-emerald-600",
     busy: "bg-amber-100 text-amber-700 px-2 p-1 rounded border border-amber-600",
   };
 

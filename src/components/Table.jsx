@@ -1,4 +1,5 @@
 import React from "react";
+import { ClipboardClock, UserPlus } from "lucide-react";
 
 function Table({ appointments = [], doctors = [], patients = [] }) {
   const getDoctor = (name) => doctors.find((doctor) => doctor.name === name);
@@ -15,7 +16,12 @@ function Table({ appointments = [], doctors = [], patients = [] }) {
   return (
     <div className="w-full p-4 shadow shadow-slate-300 rounded-sm bg-white mt-10">
       <div className="mb-4">
-        <h2 className="text-lg font-semibold text-slate-800">All Appointments</h2>
+        <h2 className="text-lg font-semibold text-slate-800 flex gap-2 items-center">
+          <div className="p-3 bg-green-200 text-green-700 rounded-xl">
+            <ClipboardClock className="h-5 w-5" />
+          </div>
+          All Appointments
+        </h2>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full border-separate border-spacing-y-3">
@@ -37,10 +43,7 @@ function Table({ appointments = [], doctors = [], patients = [] }) {
                 "bg-slate-100 text-slate-700";
 
               return (
-                <tr
-                  key={appointment.id}
-                  className="bg-sky-50"
-                >
+                <tr key={appointment.id} className="bg-sky-50">
                   <td className="px-4 py-4 align-top">
                     <div className="flex items-start gap-3">
                       <img

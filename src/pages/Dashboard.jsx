@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import { getDoctors, getPatients, getNurses, getAppointments } from "../api.js";
 import StateCard from "../components/StateCard.jsx";
-import { UserPlus, UsersRound, ClipboardClock, HeartPlus } from "lucide-react";
+import {
+  UserPlus,
+  UsersRound,
+  ClipboardClock,
+  HeartPlus,
+  LayoutDashboard,
+  UserRound,
+} from "lucide-react";
 import PopularCards from "../components/PopularCards.jsx";
 import Table from "../components/Table.jsx";
 
@@ -30,7 +37,10 @@ function Dashboard() {
   return (
     <main className="space-y-4">
       <section>
-        <h1 className="text-2xl font-semibold text-slate-800">
+        <h1 className="text-2xl font-semibold text-slate-800 flex gap-2 items-center mb-3">
+          <div className="p-3 bg-sky-200 text-sky-700 rounded-xl">
+            <LayoutDashboard className="h-5 w-5" />
+          </div>
           Admin Dashboard
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -81,7 +91,10 @@ function Dashboard() {
 
       <section>
         <div className="w-full p-2 shadow shadow-gray-400 mt-10 rounded-sm">
-          <h1 className="lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4">
+          <h1 className="lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
+            <div className="p-3 bg-red-200 text-red-700 rounded-xl">
+              <UserPlus className="h-5 w-5" />
+            </div>
             Popular Doctors
           </h1>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
@@ -113,7 +126,10 @@ function Dashboard() {
 
       <section>
         <div className="w-full p-2 shadow shadow-gray-400 mt-10 rounded-sm">
-          <h1 className="lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4">
+          <h1 className="lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
+            <div className="p-3 bg-violet-200 text-violet-700 rounded-xl">
+              <UsersRound className="h-5 w-5" />
+            </div>
             Most recent patients
           </h1>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
