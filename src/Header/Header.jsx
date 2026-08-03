@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../images/logo4.avif";
+import logo from "../images/NewLogo.png";
 import Avatar from "../components/Avatar";
 import Button from "../components/Button";
 import { Moon, Settings, Menu, X, Sun } from "lucide-react";
@@ -18,14 +18,14 @@ function Header() {
   const { toggleTheme, darkMode } = useTheme();
 
   return (
-    <header className="w-full border-b border-slate-200 bg-white text-slate-700">
+    <header className="dark:bg-slate-800 dark:border-gray-600 dark:text-slate-100 w-full border-b border-slate-200 bg-white text-slate-700">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <div className="hidden md:flex items-center gap-2">
-          <Avatar src={logo} alt="Logo" className="w-12 h-12" />
+        <div className="hidden md:flex items-center">
+          <Avatar src={logo} alt="Logo" className="w-15 h-15 rounded-full" />
           <h1 className="text-2xl font-semibold">Medicare</h1>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 font-semibold text-slate-700">
+        <nav className="dark:text-slate-100 hidden md:flex items-center gap-8 font-semibold text-slate-700">
           {navItems.map((item) => (
             <NavLink
               key={item.label}
@@ -56,12 +56,12 @@ function Header() {
           <div className="flex items-center gap-3">
             <Button
               onClick={toggleTheme}
-              className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full`}
+              className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
             >
               {darkMode ? <Sun size={`15`}/> : <Moon size={`15`} />}
             </Button>
             <Button
-              className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full`}
+              className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
             >
               <Settings size={`15`} />
             </Button>

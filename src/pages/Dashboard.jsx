@@ -90,7 +90,7 @@ function Dashboard() {
       {/* Popular Doctors section */}
 
       <section>
-        <div className="w-full p-2 shadow shadow-gray-400 mt-10 rounded-sm">
+        <div className="w-full p-2 shadow shadow-gray-400 dark:shadow-none dark:border dark:border-gray-600 mt-10 rounded-sm">
           <h1 className="dark:text-slate-100 lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
             <div className="p-3 bg-red-200 text-red-700 rounded-xl">
               <UserPlus className="h-5 w-5" />
@@ -125,7 +125,7 @@ function Dashboard() {
       {/* Patients section */}
 
       <section>
-        <div className="w-full p-2 shadow shadow-gray-400 mt-10 rounded-sm">
+        <div className="w-full p-2 shadow dark:shadow-none dark:border dark:border-gray-600 shadow-gray-400 mt-10 rounded-sm">
           <h1 className="dark:text-slate-100 lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
             <div className="p-3 bg-violet-200 text-violet-700 rounded-xl">
               <UsersRound className="h-5 w-5" />
