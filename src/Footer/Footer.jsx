@@ -54,11 +54,11 @@ function Footer() {
 
             <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-900">
-                Contact
+                Contact Developer
               </p>
               <ul className="space-y-2 text-sm text-slate-600">
-                <li>support@medicare.com</li>
-                <li>+1 (555) 123-4567</li>
+                <li>developer.ataullah@gmail.com</li>
+                <li>+93 704071798</li>
               </ul>
             </div>
           </div>
