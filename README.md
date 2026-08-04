@@ -2,7 +2,7 @@
 
 A modern Hospital Management System built with React to demonstrate frontend development skills, component-based architecture, responsive UI design, and scalable application structure.
 
-> **Project Status:** Patient Management is currently under development.
+> **Project Status:** Patient dashboard and some small pieces are currently under development.
 
 ---
 
