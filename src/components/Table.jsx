@@ -1,7 +1,7 @@
 import React from "react";
 import { ClipboardClock, UserPlus } from "lucide-react";
 
-function Table({ appointments = [], doctors = [], patients = [] }) {
+function Table({ appointments = [], doctors = [], patients = [], title }) {
   const getDoctor = (name) => doctors.find((doctor) => doctor.name === name);
   const getPatient = (name) =>
     patients.find((patient) => patient.name === name);
@@ -20,7 +20,7 @@ function Table({ appointments = [], doctors = [], patients = [] }) {
           <div className="p-3 bg-green-200 text-green-700 rounded-xl">
             <ClipboardClock className="h-5 w-5" />
           </div>
-          All Appointments
+          {title}
         </h2>
       </div>
       <div className="overflow-x-auto">
