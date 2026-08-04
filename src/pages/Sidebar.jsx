@@ -11,8 +11,8 @@ import {
 
 const links = [
   { to: "/sidebar", label: "Dashboard", icon: <LayoutDashboard /> },
-  { to: "/patients", label: "Patients", icon: <UsersRound /> },
   { to: "/doctors", label: "Doctors", icon: <UserRoundPlus /> },
+  { to: "/patients", label: "Patients", icon: <UsersRound /> },
   { to: "/appointments", label: "Appointments", icon: <ClipboardClock /> },
   { to: "/settings", label: "Settings", icon: <Settings /> },
 ];
