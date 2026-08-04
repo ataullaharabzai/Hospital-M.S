@@ -116,6 +116,7 @@ function Dashboard() {
       {/* Appointments table section */}
       <section>
         <Table
+        title={`All Appointments`}
           appointments={appointments}
           doctors={doctors}
           patients={patients}
