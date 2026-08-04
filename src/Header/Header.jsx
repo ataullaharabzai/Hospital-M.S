@@ -18,7 +18,7 @@ function Header() {
   const { toggleTheme, darkMode } = useTheme();
 
   return (
-    <header className="dark:bg-slate-800 dark:border-gray-600 dark:text-slate-100 w-full border-b border-slate-200 bg-white text-slate-700">
+    <header className="dark:bg-slate-900 dark:text-slate-100 w-full bg-white text-slate-700">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <div className="hidden md:flex items-center">
           <Avatar src={logo} alt="Logo" className="w-15 h-15 rounded-full" />
