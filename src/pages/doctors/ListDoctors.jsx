@@ -30,7 +30,7 @@ function ListDoctors() {
   return (
     <main>
       <section>
-        <h1 className="text-2xl font-bold flex items-center gap-2">
+        <h1 className="text-2xl font-bold flex items-center gap-2 dark:text-slate-100">
           <div className="p-3 rounded-lg bg-violet-200 text-violet-600">
             <UserPlus className="w-5 h-5" />
           </div>

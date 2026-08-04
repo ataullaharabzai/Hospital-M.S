@@ -14,7 +14,7 @@ function DoctorSectionInfo({
     : percentageColor || "bg-rose-600";
 
   return (
-    <div className="dark:bg-blue-950 dark:shadow-none w-full bg-white shadow shadow-gray-400 p-5 rounded flex justify-center items-start flex-col gap-5 hover:border hover:border-sky-500 border border-transparent transition-all">
+    <div className="dark:bg-blue-950 dark:shadow-none w-full bg-white shadow shadow-gray-300 p-5 rounded flex justify-center items-start flex-col gap-5 hover:border hover:border-sky-500 border border-transparent transition-all">
       <div className="w-full flex justify-between items-center">
         <div className="">
           <h1 className="dark:text-slate-200 text-slate-700 font-bold text-[14px] md:text-[16px]">
