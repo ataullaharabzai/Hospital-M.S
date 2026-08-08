@@ -1,4 +1,4 @@
-export const API_URL = "http://localhost:3000";
+export const API_URL = "https://6a76dd7c63e9caf860c325c1.mockapi.io/api/v1";
 
 export const getDoctors = () => {
   return fetch(`${API_URL}/doctors`).then((res) => res.json());
