@@ -32,7 +32,7 @@ function Header() {
               key={item.label}
               to={item.to}
               className={({ isActive }) =>
-                `transition hover:text-slate-900 ${isActive ? "" : ""}`
+                `transition hover:text-slate-900 ${isActive ? "dark:text-slate-100 dark:hover:text-slate-400" : "dark:text-slate-200 dark:hover:text-slate-400"}`
               }
             >
               {item.label}
@@ -48,9 +48,9 @@ function Header() {
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             {menuOpen ? (
-              <X className="h-5 w-5 dark:bg-rose-200 dark:text-rose-500 dark:border-none" />
+              <X className="h-5 w-5 dark:text-rose-600 dark:border-none" />
             ) : (
-              <Menu className="h-5 w-5 dark:bg-violet-200 dark:text-violet-500 dark:border-none" />
+              <Menu className="h-5 w-5 dark:text-violet-600 dark:border-none" />
             )}
           </button>
 
