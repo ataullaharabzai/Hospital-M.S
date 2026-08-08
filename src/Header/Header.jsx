@@ -8,9 +8,9 @@ import profile from "../images/my_dark.jpeg";
 import { useTheme } from "../contexts/ThemeProvider";
 
 const navItems = [
-  { to: "/sidebar", label: "Doctors" },
-  { to: "/sidebar", label: "Appointments" },
-  { to: "/sidebar", label: "Patients" },
+  { to: "/doctors", label: "Doctors" },
+  { to: "/appointments", label: "Appointments" },
+  { to: "/patients", label: "Patients" },
 ];
 
 function Header() {
