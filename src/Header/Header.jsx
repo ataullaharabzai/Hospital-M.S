@@ -32,7 +32,7 @@ function Header() {
               key={item.label}
               to={item.to}
               className={({ isActive }) =>
-                `transition hover:text-slate-900 ${isActive ? "dark:text-slate-100 dark:hover:text-slate-400" : "dark:text-slate-200 dark:hover:text-slate-400"}`
+                `transition ${isActive ? "dark:text-sky-400 dark:hover:text-sky-600 text-sky-500 hover:text-sky-700" : "dark:text-slate-200 dark:hover:text-slate-400"}`
               }
             >
               {item.label}
@@ -87,8 +87,8 @@ function Header() {
               to={item.to}
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
-                `block rounded-lg px-3 py-2 text-sm font-medium transition text-slate-700 hover:text-slate-900 dark:text-slate-600 dark:hover:text-slate-800 ${
-                  isActive ? "" : ""
+                `block rounded-lg px-3 py-2 text-sm font-medium transition text-slate-700 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-800 ${
+                  isActive ? "rounded bg-sky-200" : ""
                 }`
               }
             >
