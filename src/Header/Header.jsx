@@ -59,7 +59,7 @@ function Header() {
               onClick={toggleTheme}
               className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
             >
-              {darkMode ? <Sun size={`15`}/> : <Moon size={`15`} />}
+              {darkMode ? <Sun size={`15`} /> : <Moon size={`15`} />}
             </Button>
             <Button
               className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
@@ -80,14 +80,14 @@ function Header() {
       <div
         className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${menuOpen ? "max-h-60" : "max-h-0"}`}
       >
-        <nav className="space-y-1 border-t border-slate-200 bg-slate-50 px-4 py-4">
+        <nav className="space-y-1 border-t border-slate-200 bg-slate-50 px-4 py-4 dark:bg-slate-900 dark:border-slate-700">
           {navItems.map((item) => (
             <NavLink
               key={item.label}
               to={item.to}
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
-                `block rounded-lg px-3 py-2 text-sm font-medium transition ${
+                `block rounded-lg px-3 py-2 text-sm font-medium transition text-slate-700 hover:text-slate-900 dark:text-slate-600 dark:hover:text-slate-800 ${
                   isActive ? "" : ""
                 }`
               }
