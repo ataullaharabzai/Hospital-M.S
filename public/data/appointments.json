@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "patient": "John Smith",
+    "doctor": "Dr. Sarah Wilson",
+    "department": "Cardiology",
+    "date": "2026-07-30",
+    "time": "09:00 AM",
+    "mode": "Online",
+    "status": "Confirmed"
+  },
+  {
+    "id": 2,
+    "patient": "Emily Johnson",
+    "doctor": "Dr. James Carter",
+    "department": "Neurology",
+    "date": "2026-07-31",
+    "time": "11:30 AM",
+    "mode": "In-Person",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "patient": "David Lee",
+    "doctor": "Dr. Michael John",
+    "department": "Orthopedics",
+    "date": "2026-08-01",
+    "time": "02:00 PM",
+    "mode": "Online",
+    "status": "Completed"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Emma Davis",
+    "department": "Emergency",
+    "shift": "Morning",
+    "phone": "+1 555-2010",
+    "status": "On Duty",
+    "image": "https://randomuser.me/api/portraits/women/22.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sophia Martinez",
+    "department": "ICU",
+    "shift": "Night",
+    "phone": "+1 555-2011",
+    "status": "On Duty",
+    "image": "https://randomuser.me/api/portraits/women/31.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Olivia Taylor",
+    "department": "Pediatrics",
+    "shift": "Evening",
+    "phone": "+1 555-2012",
+    "status": "Off Duty",
+    "image": "https://randomuser.me/api/portraits/women/56.jpg"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Wilson",
+    "specialization": "Cardiology",
+    "experience": 12,
+    "phone": "+1 555-1010",
+    "email": "sarah@medicare.com",
+    "status": "Available",
+    "patients": 42,
+    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Dr. James Carter",
+    "specialization": "Neurology",
+    "experience": 9,
+    "phone": "+1 555-1011",
+    "email": "james@medicare.com",
+    "status": "Busy",
+    "patients": 35,
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Emily Brown",
+    "specialization": "Pediatrics",
+    "experience": 7,
+    "phone": "+1 555-1012",
+    "email": "emily@medicare.com",
+    "status": "Available",
+    "patients": 28,
+    "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Michael John",
+    "specialization": "Orthopedics",
+    "experience": 15,
+    "phone": "+1 555-1013",
+    "email": "michael@medicare.com",
+    "status": "On Leave",
+    "patients": 20,
+    "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80"
+  }
+]

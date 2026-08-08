@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "John Smith",
+    "age": 35,
+    "gender": "Male",
+    "bloodGroup": "A+",
+    "disease": "Hypertension",
+    "doctor": "Dr. Sarah Wilson",
+    "admitted": true,
+    "room": "A-101",
+    "phone": "+1 555-3010",
+    "image": "https://randomuser.me/api/portraits/men/10.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Emily Johnson",
+    "age": 27,
+    "gender": "Female",
+    "bloodGroup": "O+",
+    "disease": "Migraine",
+    "doctor": "Dr. James Carter",
+    "admitted": false,
+    "room": "-",
+    "phone": "+1 555-3011",
+    "image": "https://randomuser.me/api/portraits/women/40.jpg"
+  },
+  {
+    "id": 3,
+    "name": "David Lee",
+    "age": 49,
+    "gender": "Male",
+    "bloodGroup": "B+",
+    "disease": "Fracture",
+    "doctor": "Dr. Michael Johnson",
+    "admitted": true,
+    "room": "B-205",
+    "phone": "+1 555-3012",
+    "image": "https://randomuser.me/api/portraits/men/60.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Sophia White",
+    "age": 18,
+    "gender": "Female",
+    "bloodGroup": "AB+",
+    "disease": "Fever",
+    "doctor": "Dr. Emily Brown",
+    "admitted": false,
+    "room": "-",
+    "phone": "+1 555-3013",
+    "image": "https://randomuser.me/api/portraits/women/65.jpg"
+  }
+]

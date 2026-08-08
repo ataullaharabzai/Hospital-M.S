@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "bedNumber": "A-101",
+    "ward": "General",
+    "status": "Occupied"
+  },
+  {
+    "id": 2,
+    "bedNumber": "A-102",
+    "ward": "General",
+    "status": "Available"
+  },
+  {
+    "id": 3,
+    "bedNumber": "B-201",
+    "ward": "ICU",
+    "status": "Occupied"
+  },
+  {
+    "id": 4,
+    "bedNumber": "B-202",
+    "ward": "ICU",
+    "status": "Available"
+  },
+  {
+    "id": 5,
+    "bedNumber": "C-301",
+    "ward": "Emergency",
+    "status": "Available"
+  },
+  {
+    "id": 6,
+    "bedNumber": "C-302",
+    "ward": "Emergency",
+    "status": "Occupied"
+  }
+]
