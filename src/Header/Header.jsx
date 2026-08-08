@@ -8,6 +8,7 @@ import profile from "../images/my_dark.jpeg";
 import { useTheme } from "../contexts/ThemeProvider";
 
 const navItems = [
+  { to: "/sidebar", label: "Dashboard" },
   { to: "/doctors", label: "Doctors" },
   { to: "/appointments", label: "Appointments" },
   { to: "/patients", label: "Patients" },
