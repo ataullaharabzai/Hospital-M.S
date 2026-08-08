@@ -2,7 +2,10 @@ import React from 'react'
 
 function ListAppointments() {
   return (
-    <div>ListAppointments</div>
+    <div>
+      <p>Setting is under development</p>
+      <p>Coming Soon!</p>
+    </div>
   )
 }
 

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function ListPatients() {
   return (
-    <div>ListPatients</div>
-  )
+    <div>
+      <p>Setting is under development</p>
+      <p>Coming Soon!</p>
+    </div>
+  );
 }
 
-export default ListPatients
+export default ListPatients;
