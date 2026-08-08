@@ -8,59 +8,59 @@ import Button from "../components/Button.jsx";
 import { LogIn } from "lucide-react";
 
 function Login() {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // const handleChange = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
 
-  const loginAsGuest = () => {
-    setFormData({
-      ...formData,
-      email: "admin@medicare.com",
-      password: "123456",
-    });
-  };
+  // const loginAsGuest = () => {
+  //   setFormData({
+  //     ...formData,
+  //     email: "admin@medicare.com",
+  //     password: "123456",
+  //   });
+  // };
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    const response = await fetch(
-      `https://6a76dd7c63e9caf860c325c1.mockapi.io/api/v1/users?email=${encodeURIComponent(formData.email)}`,
-    );
+  //   const response = await fetch(
+  //     `https://6a76dd7c63e9caf860c325c1.mockapi.io/api/v1/users?email=${encodeURIComponent(formData.email)}`,
+  //   );
 
-    if (!response.ok) {
-      alert("Login request failed. Please try again.");
-      return;
-    }
+  //   if (!response.ok) {
+  //     alert("Login request failed. Please try again.");
+  //     return;
+  //   }
 
-    const users = await response.json();
+  //   const users = await response.json();
 
-    const user = users[0];
+  //   const user = users[0];
 
-    if (!formData.email.trim() && !formData.password.trim()) {
-      alert("Please enter email and password to login!");
-      return;
-    }
+  //   if (!formData.email.trim() && !formData.password.trim()) {
+  //     alert("Please enter email and password to login!");
+  //     return;
+  //   }
 
-    if (!user || user.password !== formData.password) {
-      alert("Invalid email or password");
-      return;
-    }
+  //   if (!user || user.password !== formData.password) {
+  //     alert("Invalid email or password");
+  //     return;
+  //   }
 
-    localStorage.setItem("user", JSON.stringify(user));
+  //   localStorage.setItem("user", JSON.stringify(user));
 
-    if (user.role === "admin") {
-      navigate("/sidebar");
-    }
+  //   if (user.role === "admin") {
+  //     navigate("/sidebar");
+  //   }
 
-    setFormData("");
-  };
+  //   setFormData("");
+  // };
 
   return (
     <main className="flex justify-evenly items-center bg-gray-100">
