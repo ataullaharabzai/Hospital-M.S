@@ -48,9 +48,9 @@ function Header() {
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             {menuOpen ? (
-              <X className="h-5 w-5" />
+              <X className="h-5 w-5 dark:bg-rose-200 dark:text-rose-500 dark:border-none" />
             ) : (
-              <Menu className="h-5 w-5" />
+              <Menu className="h-5 w-5 dark:bg-violet-200 dark:text-violet-500 dark:border-none" />
             )}
           </button>
 
