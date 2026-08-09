@@ -61,11 +61,13 @@ function Header() {
             >
               {darkMode ? <Sun size={`15`} /> : <Moon size={`15`} />}
             </Button>
-            <Button
-              className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
-            >
-              <Settings size={`15`} />
-            </Button>
+            <NavLink to={`/settings`}>
+              <Button
+                className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
+              >
+                <Settings size={`15`} />
+              </Button>
+            </NavLink>
             <div className="w-8 h-8">
               <Avatar
                 src={profile}
