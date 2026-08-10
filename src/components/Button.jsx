@@ -6,10 +6,17 @@ function Button({
   onClick,
   type = "button",
   className,
+  disabled,
   ...rest
 }) {
   return (
-    <button type={type} onClick={onClick} className={className} {...rest}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={className}
+      {...rest}
+    >
       {children ? children : text}
     </button>
   );
