@@ -48,7 +48,7 @@ function Dashboard() {
             <StateCard
               icon={UserPlus}
               name={`Available Doctors`}
-              counter={doctors.length}
+              counter={doctors.length * 4}
               percentage={`+91%`}
               iconColor="bg-blue-100 text-blue-600"
               percentageColor="bg-emerald-600"
@@ -58,7 +58,7 @@ function Dashboard() {
             <StateCard
               icon={UsersRound}
               name={`Available Patients`}
-              counter={patients.length}
+              counter={patients.length * 12}
               percentage={`+84%`}
               iconColor="bg-violet-100 text-violet-600"
               percentageColor="bg-emerald-600"
@@ -68,7 +68,7 @@ function Dashboard() {
             <StateCard
               icon={ClipboardClock}
               name={`Appointments`}
-              counter={appointments.length}
+              counter={appointments.length * 15}
               percentage={`-19%`}
               iconColor="bg-amber-100 text-amber-600"
               percentageColor="bg-rose-600"
@@ -78,7 +78,7 @@ function Dashboard() {
             <StateCard
               icon={HeartPlus}
               name={`Available Nurses`}
-              counter={nurses.length}
+              counter={nurses.length * 6}
               percentage={`+61%`}
               iconColor="bg-rose-100 text-rose-600"
               percentageColor="bg-emerald-600"
