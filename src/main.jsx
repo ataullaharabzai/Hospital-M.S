@@ -17,6 +17,7 @@ import DashboardLayout from "./pages/DashboardLayout.jsx";
 import "@fontsource/poppins"; // Defaults to weight 400
 import "@fontsource/poppins/700.css"; // Optional: Import bold weight
 import ThemeProvider from "./contexts/ThemeProvider.jsx";
+import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,13 +29,34 @@ const router = createBrowserRouter([
       {
         element: <DashboardLayout />,
         children: [
-          { path: "sidebar", element: <Dashboard /> },
+          {
+            path: "sidebar",
+            element: (
+              <ProtectedRoute allowedRoles={["admin"]}>
+                <Dashboard />,
+              </ProtectedRoute>
+            ),
+          },
           // Patients:
-          { path: "patients", element: <ListPatients /> },
+          {
+            path: "patients",
+            element: (
+              <ProtectedRoute allowedRoles={["admin", "patient"]}>
+                <ListPatients />
+              </ProtectedRoute>
+            ),
+          },
           { path: "patients/new", element: <ModifyPatients /> },
           { path: "patients/edit/:id", element: <ModifyPatients /> },
           //Doctor:
-          { path: "doctors", element: <ListDoctors /> },
+          {
+            path: "doctors",
+            element: (
+              <ProtectedRoute allowedRoles={["admin", "doctor"]}>
+                <ListDoctors />
+              </ProtectedRoute>
+            ),
+          },
           { path: "doctors/new", element: <ModifyDoctors /> },
           { path: "doctors/edit/:id", element: <ModifyDoctors /> },
           //Appointments:

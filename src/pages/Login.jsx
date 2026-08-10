@@ -51,6 +51,11 @@ function Login() {
       if (user.role === "admin") {
         navigate("/sidebar");
       }
+
+      if (user.role === "doctor") {
+        navigate("/doctors");
+      }
+
     } catch (error) {
       console.log(error.message);
     } finally {
