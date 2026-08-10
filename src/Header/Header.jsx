@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../images/NewLogo.png";
 import Avatar from "../components/Avatar";
 import Button from "../components/Button";
-import { Moon, Settings, Menu, X, Sun } from "lucide-react";
+import { Moon, Settings, Menu, X, Sun, Bell } from "lucide-react";
 import profile from "../images/my_dark.jpeg";
 import { useTheme } from "../contexts/ThemeProvider";
 
@@ -55,6 +55,7 @@ function Header() {
           </button>
 
           <div className="flex items-center gap-3">
+            {/* Theme button */}
             <Button
               onClick={toggleTheme}
               className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
@@ -62,12 +63,23 @@ function Header() {
               {darkMode ? <Sun size={`15`} /> : <Moon size={`15`} />}
             </Button>
             <NavLink to={`/settings`}>
+
+            {/* Settings button */}
               <Button
-                className={`border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
+                className={`border hover:animate-spin border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600`}
               >
                 <Settings size={`15`} />
               </Button>
             </NavLink>
+
+            {/* Notification button */}
+            <div className="relative">
+              <span className="absolute inset-0 rounded-full border border-slate-400 animate-ping"></span>
+
+              <Button className="relative border border-slate-400 cursor-pointer hover:bg-slate-200 transition-all p-2 rounded-full dark:text-slate-50 dark:hover:bg-slate-600">
+                <Bell size={15} />
+              </Button>
+            </div>
             <div className="w-8 h-8">
               <Avatar
                 src={profile}
