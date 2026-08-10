@@ -7,8 +7,15 @@ import {
   SendToBack,
   UserPlus,
   UsersRound,
+  User,
+  Video,
+  ClipboardPenLine,
+  ClipboardCheck,
+  BookDown,
+  TrendingUp,
 } from "lucide-react";
 import Table from "../../components/Table";
+import DoctorSectionMiniCards from "../../components/DoctorSectionMiniCards";
 
 function ListDoctors() {
   const [appointments, setAppointments] = useState([]);
@@ -64,16 +71,59 @@ function ListDoctors() {
         </div>
       </section>
 
+      {/* Mini Cards */}
+
+      <section>
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-2 mt-5">
+          <DoctorSectionMiniCards
+            icon={User}
+            title={`Total Patients`}
+            count={patients.length * 9}
+            iconBg={`bg-blue-600`}
+          />
+          <DoctorSectionMiniCards
+            icon={Video}
+            title={`Video Consultation`}
+            count={patients.length * 5}
+            iconBg={`bg-cyan-500`}
+          />
+          <DoctorSectionMiniCards
+            icon={ClipboardPenLine}
+            title={`Rescheduled`}
+            count={patients.length * 4}
+            iconBg={`bg-green-600`}
+          />
+          <DoctorSectionMiniCards
+            icon={ClipboardCheck}
+            title={`Pre Visit Bookings`}
+            count={patients.length * 3}
+            iconBg={`bg-amber-600`}
+          />
+          <DoctorSectionMiniCards
+            icon={BookDown}
+            title={`Walking Bookings`}
+            count={patients.length * 2}
+            iconBg={`bg-blue-800`}
+          />
+          <DoctorSectionMiniCards
+            icon={TrendingUp}
+            title={`Follow Ups`}
+            count={patients.length * 7}
+            iconBg={`bg-green-800`}
+          />
+        </div>
+      </section>
+
       {/* Appointment table */}
 
       <section>
         <div>
           <Table
-          title={`Upcoming Appointments`}
-          appointments={appointments}
-          doctors={doctors}
-          patients={patients}
-        />
+            title={`Upcoming Appointments`}
+            appointments={appointments}
+            doctors={doctors}
+            patients={patients}
+          />
         </div>
       </section>
     </main>
