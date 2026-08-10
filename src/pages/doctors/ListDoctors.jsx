@@ -74,7 +74,7 @@ function ListDoctors() {
       {/* Mini Cards */}
 
       <section>
-        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-2 mt-5">
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 mt-5">
           <DoctorSectionMiniCards
             icon={User}
             title={`Total Patients`}
