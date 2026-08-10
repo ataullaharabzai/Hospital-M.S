@@ -33,7 +33,7 @@ function PopularCards({
           />
         </div>
         <div>
-          <h1 className="dark:text-slate-100 text-[14px] lg:text-[16px] text-slate-800 font-semibold">
+          <h1 className="dark:text-slate-100 text-[12px] lg:text-[14px] text-slate-800 font-semibold">
             {name}
           </h1>
           <p className="dark:text-slate-100 text-[12px] lg:text-[14px] text-slate-600">
