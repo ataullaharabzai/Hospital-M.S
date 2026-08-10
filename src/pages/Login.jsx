@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../api.js";
 import Button from "../components/Button.jsx";
-import { LogIn } from "lucide-react";
+import { LogIn, Loader2, AwardIcon, Flag } from "lucide-react";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -13,53 +13,60 @@ function Login() {
     password: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const loginAsGuest = () => {
-    setFormData({
-      ...formData,
-      email: "admin@medicare.com",
-      password: "123456",
-    });
+  const loginAsGuest = async () => {
+    await handleLogin("admin@medicare.com", "123456");
   };
 
-  const navigate = useNavigate();
+  const handleLogin = async (email, password) => {
+    setLoading(true);
+
+    try {
+      const response = await fetch(`./data/users.json`);
+
+      if (!response.ok) {
+        alert("Request failed, try again");
+        return;
+      }
+
+      const users = await response.json();
+
+      const user = users.find(
+        (user) => user.email === email && user.password === password,
+      );
+
+      if (!user) {
+        alert("Invalid email or password");
+        return;
+      }
+
+      localStorage.setItem("user", JSON.stringify(user));
+
+      if (user.role === "admin") {
+        navigate("/sidebar");
+      }
+    } catch (error) {
+      console.log(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(
-      `https://6a76dd7c63e9caf860c325c1.mockapi.io/api/v1/users?email=${encodeURIComponent(formData.email)}`,
-    );
-
-    if (!response.ok) {
-      alert("Login request failed. Please try again.");
+    if (!formData.email.trim() || !formData.password.trim()) {
+      alert("Please enter email and password to login");
       return;
     }
 
-    const users = await response.json();
-
-    const user = users[0];
-
-    if (!formData.email.trim() && !formData.password.trim()) {
-      alert("Please enter email and password to login!");
-      return;
-    }
-
-    if (!user || user.password !== formData.password) {
-      alert("Invalid email or password");
-      return;
-    }
-
-    localStorage.setItem("user", JSON.stringify(user));
-
-    if (user.role === "admin") {
-      navigate("/sidebar");
-    }
-
-    setFormData("");
+    await handleLogin(formData.email, formData.password);
   };
 
   return (
@@ -107,19 +114,31 @@ function Login() {
             <div className="w-full flex flex-col gap-3 mt-5">
               <Button
                 type={"submit"}
+                disabled={loading}
                 className={`w-full border-2 border-blue-700 bg-blue-700 text-white hover:bg-blue-600 transition-all p-1.5 rounded-sm flex items-center justify-center gap-2 cursor-pointer`}
               >
-                Sign In
-                <LogIn className="h-4 w-4" />
+                {loading ? (
+                  <>
+                    <Loader2 className="animate-spin" size={20} />
+                  </>
+                ) : (
+                  "Sign in"
+                )}
               </Button>
 
               <Button
                 onClick={loginAsGuest}
-                type={"submit"}
+                type={"button"}
+                disabled={loading}
                 className={`w-full border-2 border-blue-700 bg-blue-700 text-white hover:bg-blue-600 transition-all p-1.5 rounded-sm flex items-center justify-center gap-2 cursor-pointer`}
               >
-                Sign In as Guest
-                <LogIn className="h-4 w-4" />
+                {loading ? (
+                  <>
+                    <Loader2 className="animate-spin" size={20} />
+                  </>
+                ) : (
+                  "Sign in as Guest"
+                )}
               </Button>
             </div>
           </form>
