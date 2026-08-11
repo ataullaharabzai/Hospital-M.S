@@ -8,8 +8,8 @@ function Unauthorized() {
   return (
     <div className="min-h-screen bg-slate-950 px-4 py-10 flex items-center justify-center">
       <div className="w-full rounded-3xl p-8 md:p-12">
-        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-500/15 text-amber-400 animate-pulse">
-          <ShieldAlert className="h-8 w-8" />
+        <div className="mb-6 flex h-30 w-30 items-center justify-center rounded-full bg-amber-500/15 text-amber-400 animate-pulse">
+          <ShieldAlert className="h-15 w-15" />
         </div>
 
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-400">
@@ -34,7 +34,7 @@ function Unauthorized() {
           </button>
           <button
             type="button"
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/")}
             className="rounded-md bg-blue-600 px-5 py-3 font-medium text-white transition hover:bg-blue-700 cursor-pointer"
           >
             Sign in again
