@@ -1,4 +1,5 @@
 import React from "react";
+import {Loader2} from 'lucide-react'
 
 function DoctorSectionInfo({
   title,
@@ -6,7 +7,8 @@ function DoctorSectionInfo({
   percentage,
   icon: Icon,
   iconColor,
-  percentageColor
+  percentageColor,
+  dataLoading
 }) {
   const isPositive = percentage?.toString().startsWith("+");
   const badgeClass = isPositive
@@ -22,7 +24,7 @@ function DoctorSectionInfo({
           </h1>
           <div className="flex justify-start items-center gap-5">
             <p className="dark:text-slate-300 text-slate-700 text-[20px] md:text-2xl font-semibold">
-              {count}
+              {dataLoading ? <Loader2 className="animate-spin text-slate-700 font-semibold" /> : count}
             </p>
             <p className={`dark:text-slate-100 text-white rounded-2xl px-1 text-[10px] md:text-[14px] ${percentageColor}`}>{percentage}</p>
           </div>

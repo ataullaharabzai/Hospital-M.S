@@ -50,27 +50,30 @@ function ListDoctors() {
         <div className="w-full mt-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           <DoctorSectionInfo
             title={`Total Appointments`}
-            count={appointments.length * 5}
+            count={appointments.length * 14}
             percentage={`+67%`}
             icon={ClipboardClock}
             iconColor={`bg-blue-100 text-blue-600`}
             percentageColor={`bg-emerald-500`}
+            dataLoading={doctorLoading}
           />
           <DoctorSectionInfo
             title={`Online Consultations`}
-            count={`125`}
+            count={appointments.length * 11}
             percentage={`-15%`}
             icon={UsersRound}
             iconColor={`bg-green-100 text-green-600`}
             percentageColor={`bg-rose-500`}
+            dataLoading={doctorLoading}
           />
           <DoctorSectionInfo
             title={`Cancelled Appointments`}
-            count={appointments.length * 2}
+            count={appointments.length * 4}
             percentage={`+45%`}
             icon={BookX}
             iconColor={`bg-rose-100 text-rose-600`}
             percentageColor={`bg-emerald-500`}
+            dataLoading={doctorLoading}
           />
         </div>
       </section>
@@ -82,7 +85,7 @@ function ListDoctors() {
           <DoctorSectionMiniCards
             icon={User}
             title={`Total Patients`}
-            count={patients.length * 9}
+            count={patients.length * 19}
             iconBg={`bg-blue-600`}
             DataLoading={doctorLoading}
           />
