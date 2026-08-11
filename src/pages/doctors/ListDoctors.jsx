@@ -13,6 +13,7 @@ import {
   ClipboardCheck,
   BookDown,
   TrendingUp,
+  LoaderIcon,
 } from "lucide-react";
 import Table from "../../components/Table";
 import DoctorSectionMiniCards from "../../components/DoctorSectionMiniCards";
@@ -21,13 +22,16 @@ function ListDoctors() {
   const [appointments, setAppointments] = useState([]);
   const [doctors, setDoctors] = useState([]);
   const [patients, setPatients] = useState([]);
+  const [doctorLoading, setDoctorLoading] = useState(true);
 
   useEffect(() => {
     getAppointments().then(setAppointments);
   }, [appointments]);
 
   useEffect(() => {
-    getDoctors().then(setDoctors);
+    getDoctors()
+      .then(setDoctors)
+      .finally(() => setDoctorLoading(false));
   }, []);
 
   useEffect(() => {
@@ -80,36 +84,42 @@ function ListDoctors() {
             title={`Total Patients`}
             count={patients.length * 9}
             iconBg={`bg-blue-600`}
+            DataLoading={doctorLoading}
           />
           <DoctorSectionMiniCards
             icon={Video}
             title={`Video Consultation`}
             count={patients.length * 5}
             iconBg={`bg-cyan-500`}
+            DataLoading={doctorLoading}
           />
           <DoctorSectionMiniCards
             icon={ClipboardPenLine}
             title={`Rescheduled`}
             count={patients.length * 4}
             iconBg={`bg-green-600`}
+            DataLoading={doctorLoading}
           />
           <DoctorSectionMiniCards
             icon={ClipboardCheck}
             title={`Pre Visit Bookings`}
             count={patients.length * 3}
             iconBg={`bg-amber-600`}
+            DataLoading={doctorLoading}
           />
           <DoctorSectionMiniCards
             icon={BookDown}
             title={`Walking Bookings`}
             count={patients.length * 2}
             iconBg={`bg-blue-800`}
+            DataLoading={doctorLoading}
           />
           <DoctorSectionMiniCards
             icon={TrendingUp}
             title={`Follow Ups`}
             count={patients.length * 7}
             iconBg={`bg-green-800`}
+            DataLoading={doctorLoading}
           />
         </div>
       </section>
