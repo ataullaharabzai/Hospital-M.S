@@ -18,6 +18,7 @@ import "@fontsource/poppins"; // Defaults to weight 400
 import "@fontsource/poppins/700.css"; // Optional: Import bold weight
 import ThemeProvider from "./contexts/ThemeProvider.jsx";
 import ProtectedRoute from "./pages/ProtectedRoute.jsx";
+import Unauthorized from "./pages/Unauthorized.jsx";
 
 const router = createBrowserRouter([
   {
@@ -65,8 +66,10 @@ const router = createBrowserRouter([
           { path: "appointments/edit/:id", element: <M_Appointments /> },
           //Settings:
           { path: "settings", element: <Settings /> },
+          //Unauthorized message
         ],
       },
+      {path: 'unauthorized', element: <Unauthorized />}
     ],
   },
 ]);
