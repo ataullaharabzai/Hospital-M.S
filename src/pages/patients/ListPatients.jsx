@@ -115,8 +115,8 @@ function ListPatients() {
       {/* Vitals */}
 
       <section>
-        <div className="w-full bg-white mt-5 shadow shadow-gray-400 rounded p-4">
-          <h1 className="text-[18px] md:text-[20px] font-semibold dark:text-slate-100 text-slate-800 mb-5 border-b-2 border-gray-200 py-2">
+        <div className="w-full bg-white mt-5 shadow shadow-gray-400 rounded p-4 dark:bg-blue-950 dark:shadow-none">
+          <h1 className="text-[18px] md:text-[20px] font-semibold dark:text-slate-100 text-slate-800 mb-5 border-b-2 border-gray-200 dark:border-gray-600 py-2">
             Vitals
           </h1>
           <div className="w-full grid grid-cols-3 md:grid-cols-6 gap-1.5">
