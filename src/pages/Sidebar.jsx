@@ -14,12 +14,16 @@ const links = [
   { to: "/doctors", label: "Doctors", icon: <UserRoundPlus /> },
   { to: "/patients", label: "Patients", icon: <UsersRound /> },
   { to: "/appointments", label: "Appointments", icon: <ClipboardClock /> },
-  { to: "/settings", label: "Settings", icon: <Settings className="hover:animate-spin" /> },
+  {
+    to: "/settings",
+    label: "Settings",
+    icon: <Settings className="hover:animate-spin" />,
+  },
 ];
 
 function Sidebar() {
   return (
-    <div className="h-full p-5 dark:bg-blue-950">
+    <div className="h-full p-5 bg-white dark:bg-slate-900">
       <h2 className="mb-6 text-xl font-semibold text-slate-700 dark:text-slate-100">
         Hospital Menu
       </h2>
@@ -31,8 +35,8 @@ function Sidebar() {
             className={({ isActive }) =>
               `block rounded-lg px-3 py-2 text-sm font-medium transition ${
                 isActive
-                  ? "bg-sky-600 text-white"
-                  : "text-slate-700 dark:text-slate-300 dark:hover:bg-sky-900 hover:bg-sky-100"
+                  ? "bg-sky-600 text-white shadow-sm shadow-sky-500/20"
+                  : "text-slate-700 hover:bg-sky-100 dark:text-slate-300 dark:hover:bg-slate-800"
               }`
             }
           >

@@ -11,14 +11,14 @@ const navLinks = [
 
 function Footer() {
   return (
-    <footer className="dark:bg-slate-900 dark:border-gray-600 border-t border-slate-200 bg-white text-slate-700">
+    <footer className="border-t border-slate-200 bg-white text-slate-700 transition-colors duration-200 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md ">
             <p className="dark:text-slate-100 text-2xl font-semibold text-slate-900">
               Medicare
             </p>
-            <p className="dark:text-slate-100 mt-3 text-sm leading-6 text-slate-600">
+            <p className="dark:text-slate-300 mt-3 text-sm leading-6 text-slate-600">
               Helping hospitals manage patients, doctors, appointments, and
               daily operations from one centralized dashboard.
             </p>

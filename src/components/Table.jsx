@@ -14,10 +14,10 @@ function Table({ appointments = [], doctors = [], patients = [], title }) {
   };
 
   return (
-    <div className="dark:bg-blue-950 w-full p-4 dark:shadow-none shadow shadow-slate-300 rounded-sm bg-white mt-10">
+    <div className="mt-10 w-full rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900/90 dark:shadow-slate-950/30">
       <div className="mb-4">
-        <h2 className="dark:text-slate-100 text-lg font-semibold text-slate-800 flex gap-2 items-center">
-          <div className="p-3 bg-green-200 text-green-700 rounded-xl">
+        <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-800 dark:text-slate-100">
+          <div className="rounded-xl bg-green-200 p-3 text-green-700">
             <ClipboardClock className="h-5 w-5" />
           </div>
           {title}
@@ -26,7 +26,7 @@ function Table({ appointments = [], doctors = [], patients = [], title }) {
       <div className="overflow-x-auto">
         <table className="min-w-full border-separate border-spacing-y-3">
           <thead>
-            <tr className="dark:text-slate-100 text-left text-sm tracking-wide text-slate-700">
+            <tr className="text-left text-sm tracking-wide text-slate-700 dark:text-slate-200">
               <th className="px-4 py-3">Doctor</th>
               <th className="px-4 py-3">Patient</th>
               <th className="px-4 py-3">Date &amp; Time</th>
@@ -40,10 +40,13 @@ function Table({ appointments = [], doctors = [], patients = [], title }) {
               const patient = getPatient(appointment.patient);
               const statusClass =
                 statusClasses[appointment.status] ||
-                "bg-slate-100 text-slate-700";
+                "bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-200";
 
               return (
-                <tr key={appointment.id} className="bg-sky-50 dark:bg-slate-800">
+                <tr
+                  key={appointment.id}
+                  className="bg-sky-50 dark:bg-slate-800/80"
+                >
                   <td className="px-4 py-4 align-top">
                     <div className="flex items-start gap-3">
                       <img
@@ -82,7 +85,9 @@ function Table({ appointments = [], doctors = [], patients = [], title }) {
                     <p className="font-medium text-slate-800 dark:text-slate-300">
                       {appointment.date}
                     </p>
-                    <p className="text-sm text-slate-500 dark:text-slate-300">{appointment.time}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-300">
+                      {appointment.time}
+                    </p>
                   </td>
                   <td className="px-4 py-4 align-top">
                     <span className="dark:bg-transparent dark:text-slate-300 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">

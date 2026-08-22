@@ -6,11 +6,11 @@ import Sidebar from "./Sidebar";
 
 function DashboardLayout() {
   return (
-    <div className="dark:bg-slate-800 min-h-screen flex flex-col bg-slate-50 text-slate-800">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 transition-colors duration-200 dark:bg-slate-950 dark:text-slate-100">
       <Header />
 
       <div className="flex flex-1 overflow-hidden">
-        <aside className="hidden lg:block lg:w-64 lg:shrink-0 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto bg-white">
+        <aside className="hidden lg:block lg:w-64 lg:shrink-0 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto bg-white dark:bg-slate-900/90 dark:border-r dark:border-slate-800">
           <Sidebar />
         </aside>
 
@@ -21,7 +21,7 @@ function DashboardLayout() {
         </main>
       </div>
 
-      <Footer /> 
+      <Footer />
     </div>
   );
 }

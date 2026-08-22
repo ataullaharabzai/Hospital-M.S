@@ -23,27 +23,27 @@ function PopularCards({
   const statusClassName = statusClasses[normalizedStatus] || "text-slate-700";
 
   return (
-    <div className="dark:bg-blue-950 p-3 flex justify-center items-start flex-col gap-4 rounded-lg bg-white shadow dark:shadow-none border border-transparent hover:border-sky-500 transition-all">
+    <div className="flex justify-center items-start flex-col gap-4 rounded-xl border border-slate-200 bg-white p-3 shadow-sm transition-all hover:border-sky-500 dark:border-slate-700 dark:bg-slate-900/90 dark:shadow-slate-950/30">
       <div className="flex justify-center items-center gap-2">
         <div>
           <img
             src={avatar}
             alt={`Image of ${name}`}
-            className="lg:w-14 lg:h-14  w-10 h-10 object-cover rounded-full"
+            className="lg:w-14 lg:h-14 w-10 h-10 rounded-full object-cover"
           />
         </div>
         <div>
-          <h1 className="dark:text-slate-100 text-[12px] lg:text-[14px] text-slate-800 font-semibold">
+          <h1 className="text-[12px] font-semibold text-slate-800 dark:text-slate-100 lg:text-[14px]">
             {name}
           </h1>
-          <p className="dark:text-slate-100 text-[12px] lg:text-[14px] text-slate-600">
+          <p className="text-[12px] text-slate-600 dark:text-slate-300 lg:text-[14px]">
             {profession || disease}
           </p>
         </div>
       </div>
       <div className="text-[10px] lg:text-[12px] flex justify-around items-center gap-2 w-full">
         <p className={`${statusClassName} `}>{status || phone}</p>
-        <p className="text-slate-700 dark:text-slate-100">
+        <p className="text-slate-700 dark:text-slate-200">
           {bookings !== undefined
             ? `Bookings: ${bookings}`
             : `Gender: ${gender}`}

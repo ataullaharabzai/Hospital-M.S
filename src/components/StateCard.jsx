@@ -15,10 +15,10 @@ function StateCard({
     : percentageColor || "bg-rose-600";
 
   return (
-    <div className="dark:bg-blue-950 rounded-lg w-full border border-transparent bg-white p-4 shadow-sm hover:border-sky-500 transition-all">
+    <div className="w-full rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:border-sky-500 dark:border-slate-700 dark:bg-slate-900/90 dark:shadow-slate-950/30">
       <div className="flex items-center justify-between">
         <div
-          className={`rounded-xl p-3  ${iconColor || "bg-sky-100 text-sky-600"}`}
+          className={`rounded-xl p-3 ${iconColor || "bg-sky-100 text-sky-600"}`}
         >
           <Icon className="h-5 w-5" />
         </div>
@@ -31,10 +31,12 @@ function StateCard({
 
       <div className="mt-5 flex items-end justify-between">
         <div className="">
-          <p className="dark:text-slate-100 text-sm text-slate-500">{name}</p>
-          <p className="dark:text-slate-100 text-xl font-semibold text-slate-900">{counter}</p>
+          <p className="text-sm text-slate-500 dark:text-slate-300">{name}</p>
+          <p className="text-xl font-semibold text-slate-900 dark:text-slate-100">
+            {counter}
+          </p>
         </div>
-        <div className="dark:text-slate-100 text-sm text-slate-400">7 days</div>
+        <div className="text-sm text-slate-400 dark:text-slate-400">7 days</div>
       </div>
     </div>
   );
