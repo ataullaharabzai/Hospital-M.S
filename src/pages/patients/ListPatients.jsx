@@ -16,10 +16,12 @@ import DoctorSectionInfo from "../../components/DoctorSectionInfo";
 import { getAppointments, getDoctors, getPatients } from "../../api";
 import PopularCards from "../../components/PopularCards";
 import Patient_vitals from "../../components/Patient_vitals";
+import Table from "../../components/Table";
 
 function ListPatients() {
   const [patients, setPatients] = useState([]);
   const [doctors, setDoctors] = useState([]);
+  const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
     getPatients().then(setPatients);
@@ -27,6 +29,10 @@ function ListPatients() {
 
   useEffect(() => {
     getDoctors().then(setDoctors);
+  }, []);
+
+  useEffect(() => {
+    getAppointments().then(setAppointments);
   }, []);
 
   return (
@@ -152,6 +158,17 @@ function ListPatients() {
             />
           </div>
         </div>
+      </section>
+
+      {/* Recent Appointments */}
+
+      <section>
+        <Table
+          appointments={appointments}
+          doctors={doctors}
+          patients={patients}
+          title={`Recent Appointments`}
+        />
       </section>
     </main>
   );
