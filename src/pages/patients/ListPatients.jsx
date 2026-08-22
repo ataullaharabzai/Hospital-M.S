@@ -1,11 +1,159 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import {
+  Users2,
+  ClipboardClock,
+  VideoIcon,
+  HeartPlus,
+  Activity,
+  UserPlus,
+  Weight,
+  Ruler,
+  Scale,
+  Wind,
+  Thermometer,
+} from "lucide-react";
+import DoctorSectionInfo from "../../components/DoctorSectionInfo";
+import { getAppointments, getDoctors, getPatients } from "../../api";
+import PopularCards from "../../components/PopularCards";
+import Patient_vitals from "../../components/Patient_vitals";
 
 function ListPatients() {
+  const [patients, setPatients] = useState([]);
+  const [doctors, setDoctors] = useState([]);
+
+  useEffect(() => {
+    getPatients().then(setPatients);
+  }, []);
+
+  useEffect(() => {
+    getDoctors().then(setDoctors);
+  }, []);
+
   return (
-    <div>
-      <p>Patient is under development</p>
-      <p>Coming Soon!</p>
-    </div>
+    <main>
+      <section className="space-y-4">
+        <h1 className="text-2xl font-bold flex items-center gap-2 dark:text-slate-100">
+          <div className="p-3 rounded-lg bg-green-200 text-green-600">
+            <Users2 className="w-5 h-5" />
+          </div>
+          Patients Dashboard
+        </h1>
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-1.5 items-stretch">
+          <DoctorSectionInfo
+            title={`Total Appointments`}
+            count={patients.length * 14}
+            percentage={`+95%`}
+            icon={ClipboardClock}
+            iconColor={`bg-blue-100 text-blue-600`}
+            percentageColor={`bg-emerald-500`}
+            // dataLoading={doctorLoading}
+          />
+          <DoctorSectionInfo
+            title={`Online Consultations`}
+            count={patients.length * 9}
+            percentage={`-15%`}
+            icon={VideoIcon}
+            iconColor={`bg-green-100 text-green-600`}
+            percentageColor={`bg-emerald-500`}
+            // dataLoading={doctorLoading}
+          />
+          <DoctorSectionInfo
+            title={`Blood Pressure`}
+            count={`${patients.length * 24}`}
+            unit={`g/dl`}
+            percentage={`+76%`}
+            icon={HeartPlus}
+            iconColor={`bg-rose-100 text-rose-600`}
+            percentageColor={`bg-emerald-500`}
+            // dataLoading={doctorLoading}
+          />
+          <DoctorSectionInfo
+            title={`Heart Rate`}
+            count={`${patients.length * 21}`}
+            unit={`bpm`}
+            percentage={`+61%`}
+            icon={Activity}
+            iconColor={`bg-sky-100 text-sky-600`}
+            percentageColor={`bg-emerald-500`}
+            // dataLoading={doctorLoading}
+          />
+        </div>
+      </section>
+
+      {/* My Doctors */}
+
+      <section>
+        <div className="w-full p-2 shadow shadow-gray-400 dark:shadow-none mt-10 rounded-sm">
+          <h1 className="dark:text-slate-100 lg:text-[20px] text-[16px] font-semibold text-slate-800 mb-4 flex gap-2 items-center">
+            <div className="p-3 bg-red-200 text-red-700 rounded-xl">
+              <UserPlus className="h-5 w-5" />
+            </div>
+            My Doctors
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+            {doctors.map((doctor) => (
+              <div key={doctor.id}>
+                <PopularCards
+                  avatar={doctor.image}
+                  name={doctor.name}
+                  profession={doctor.specialization}
+                  status={doctor.status}
+                  bookings={doctor.patients}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vitals */}
+
+      <section>
+        <div className="w-full bg-white mt-5 shadow shadow-gray-400 rounded p-4">
+          <h1 className="text-[18px] md:text-[20px] font-semibold dark:text-slate-100 text-slate-800 mb-5 border-b-2 border-gray-200 py-2">
+            Vitals
+          </h1>
+          <div className="w-full grid grid-cols-3 md:grid-cols-6 gap-1.5">
+            <Patient_vitals
+              icon={Weight}
+              title={`Weight`}
+              count={doctors.length * 23}
+              unit={`Kg`}
+            />
+            <Patient_vitals
+              icon={Ruler}
+              title={`Height`}
+              count={doctors.length * 42}
+              unit={`Cm`}
+            />
+            <Patient_vitals
+              icon={Scale}
+              title={`BMI`}
+              count={doctors.length * 5}
+              unit={`kg/cm`}
+            />
+            <Patient_vitals
+              icon={HeartPlus}
+              title={`Pulse`}
+              count={doctors.length * 24}
+              unit={`%`}
+            />
+            <Patient_vitals
+              icon={Wind}
+              title={`SPO2`}
+              count={doctors.length * 21}
+              unit={`%`}
+            />
+            <Patient_vitals
+              icon={Thermometer}
+              title={`Temperature`}
+              count={doctors.length * 8}
+              unit={`C`}
+            />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 
