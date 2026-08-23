@@ -40,7 +40,7 @@ const router = createBrowserRouter([
           },
           // Patients:
           {
-            path: "patients",
+            path: "patients/:id",
             element: (
               <ProtectedRoute allowedRoles={["admin", "patient"]}>
                 <ListPatients />
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
           { path: "patients/edit/:id", element: <ModifyPatients /> },
           //Doctor:
           {
-            path: "doctors",
+            path: "doctors/:id",
             element: (
               <ProtectedRoute allowedRoles={["admin", "doctor"]}>
                 <ListDoctors />
