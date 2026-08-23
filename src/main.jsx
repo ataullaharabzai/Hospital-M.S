@@ -6,9 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./pages/Dashboard.jsx";
 import ListPatients from "./pages/patients/ListPatients.jsx";
 import Login from "./pages/Login.jsx";
-import ModifyPatients from "./pages/patients/ModifyPatients.jsx";
+import Grid_patients from "./pages/patients/Grid_patients.jsx";
 import ListDoctors from "./pages/doctors/ListDoctors.jsx";
-import ModifyDoctors from "./pages/doctors/ModifyDoctors.jsx";
+import Grid_doctors from "./pages/doctors/Grid_doctors.jsx";
 import ListAppointments from "./pages/appointments/ListAppointments.jsx";
 import M_Appointments from "./pages/appointments/M_Appointments.jsx";
 import Settings from "./pages/Settings.jsx";
@@ -47,8 +47,7 @@ const router = createBrowserRouter([
               </ProtectedRoute>
             ),
           },
-          { path: "patients/new", element: <ModifyPatients /> },
-          { path: "patients/edit/:id", element: <ModifyPatients /> },
+          { path: "grid_patients", element: <Grid_patients /> },
           //Doctor:
           {
             path: "doctors",
@@ -58,8 +57,7 @@ const router = createBrowserRouter([
               </ProtectedRoute>
             ),
           },
-          { path: "doctors/new", element: <ModifyDoctors /> },
-          { path: "doctors/edit/:id", element: <ModifyDoctors /> },
+          { path: "grid_doctors", element: <Grid_doctors /> },
           //Appointments:
           { path: "appointments", element: <ListAppointments /> },
           { path: "appointments/new", element: <M_Appointments /> },
