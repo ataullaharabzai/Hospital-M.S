@@ -108,7 +108,7 @@ function Dashboard() {
                   bookings={doctor.patients}
                 />
               </div>
-            ))}
+            )).splice(0, 8)}
           </div>
         </div>
       </section>
@@ -144,7 +144,7 @@ function Dashboard() {
                   gender={patient.gender}
                 />
               </div>
-            ))}
+            )).splice(0, 8)}
           </div>
         </div>
       </section>

@@ -20,7 +20,7 @@ function DoctorSectionInfo({
     <div className="dark:bg-blue-950 dark:shadow-none w-full bg-white shadow shadow-gray-300 p-5 rounded flex justify-center items-start flex-col gap-5 hover:border hover:border-sky-500 border border-transparent transition-all">
       <div className="w-full flex justify-between items-center">
         <div className="">
-          <h1 className="dark:text-slate-200 text-slate-500 font-bold text-[12px] md:text-[13px]">
+          <h1 className="dark:text-slate-200 text-slate-500 font-bold text-[11px] md:text-[12px]">
             {title}
           </h1>
           <div className="flex justify-start items-center gap-5">

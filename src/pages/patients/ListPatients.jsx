@@ -47,7 +47,7 @@ function ListPatients() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-1.5 items-stretch">
           <DoctorSectionInfo
             title={`Total Appointments`}
-            count={patients.length * 14}
+            count={patients.length * 6}
             percentage={`+95%`}
             icon={ClipboardClock}
             iconColor={`bg-blue-100 text-blue-600`}
@@ -56,7 +56,7 @@ function ListPatients() {
           />
           <DoctorSectionInfo
             title={`Online Consultations`}
-            count={patients.length * 9}
+            count={patients.length * 3}
             percentage={`-15%`}
             icon={VideoIcon}
             iconColor={`bg-green-100 text-green-600`}
@@ -65,7 +65,7 @@ function ListPatients() {
           />
           <DoctorSectionInfo
             title={`Blood Pressure`}
-            count={`${patients.length * 24}`}
+            count={`${patients.length * 2.8}`}
             unit={`g/dl`}
             percentage={`+76%`}
             icon={HeartPlus}
@@ -75,7 +75,7 @@ function ListPatients() {
           />
           <DoctorSectionInfo
             title={`Heart Rate`}
-            count={`${patients.length * 21}`}
+            count={`${patients.length * 3}`}
             unit={`bpm`}
             percentage={`+61%`}
             icon={Activity}
@@ -107,7 +107,7 @@ function ListPatients() {
                   bookings={doctor.patients}
                 />
               </div>
-            ))}
+            )).splice(0, 8)}
           </div>
         </div>
       </section>
@@ -123,37 +123,37 @@ function ListPatients() {
             <Patient_vitals
               icon={Weight}
               title={`Weight`}
-              count={doctors.length * 23}
+              count={doctors.length * 3}
               unit={`Kg`}
             />
             <Patient_vitals
               icon={Ruler}
               title={`Height`}
-              count={doctors.length * 42}
+              count={doctors.length * 7}
               unit={`Cm`}
             />
             <Patient_vitals
               icon={Scale}
               title={`BMI`}
-              count={doctors.length * 5}
+              count={doctors.length * .8}
               unit={`kg/cm`}
             />
             <Patient_vitals
               icon={HeartPlus}
               title={`Pulse`}
-              count={doctors.length * 24}
+              count={doctors.length * 3.6}
               unit={`%`}
             />
             <Patient_vitals
               icon={Wind}
               title={`SPO2`}
-              count={doctors.length * 21}
+              count={doctors.length * 3.8}
               unit={`%`}
             />
             <Patient_vitals
               icon={Thermometer}
               title={`Temperature`}
-              count={doctors.length * 8}
+              count={doctors.length * 1.4}
               unit={`C`}
             />
           </div>

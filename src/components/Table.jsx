@@ -103,7 +103,7 @@ function Table({ appointments = [], doctors = [], patients = [], title }) {
                   </td>
                 </tr>
               );
-            })}
+            }).splice(0, 10)}
           </tbody>
         </table>
       </div>

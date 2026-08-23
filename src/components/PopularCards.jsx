@@ -14,10 +14,10 @@ function PopularCards({
   const normalizedStatus = status?.toLowerCase();
   const statusClasses = {
     "on leave":
-      "text-red-700 bg-red-100 px-2 py-1 rounded border border-red-500",
+      "text-red-700 bg-red-100 text-[8px] md:text-[10px] px-2 py-1 rounded border border-red-500",
     available:
-      "text-emerald-700 px-2 p-1 rounded bg-emerald-100 border border-emerald-600",
-    busy: "bg-amber-100 text-amber-700 px-2 p-1 rounded border border-amber-600",
+      "text-emerald-700 text-[8px] md:text-[10px] px-2 p-1 rounded bg-emerald-100 border border-emerald-600",
+    busy: "bg-amber-100 text-[8px] md:text-[10px] text-amber-700 px-2 p-1 rounded border border-amber-600",
   };
 
   const statusClassName = statusClasses[normalizedStatus] || "text-slate-700";
@@ -33,10 +33,10 @@ function PopularCards({
           />
         </div>
         <div>
-          <h1 className="text-[12px] font-semibold text-slate-800 dark:text-slate-100 lg:text-[14px]">
+          <h1 className="text-[10px] font-semibold text-slate-800 dark:text-slate-100 lg:text-[12px]">
             {name}
           </h1>
-          <p className="text-[12px] text-slate-600 dark:text-slate-300 lg:text-[14px]">
+          <p className="text-[10px] text-slate-600 dark:text-slate-300 lg:text-[12px]">
             {profession || disease}
           </p>
         </div>
