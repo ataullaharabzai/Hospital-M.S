@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAppointments, getDoctors, getPatients } from "../../api";
 import DoctorSectionInfo from "../../components/DoctorSectionInfo";
+import { NavLink } from "react-router-dom";
 import {
   BookX,
   ClipboardClock,
@@ -48,15 +49,17 @@ function ListDoctors() {
           Doctor Dashboard
         </h1>
         <div className="w-full mt-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          <DoctorSectionInfo
-            title={`Total Appointments`}
-            count={appointments.length * 14}
-            percentage={`+67%`}
-            icon={ClipboardClock}
-            iconColor={`bg-blue-100 text-blue-600`}
-            percentageColor={`bg-emerald-500`}
-            dataLoading={doctorLoading}
-          />
+          <NavLink to="/appointments">
+            <DoctorSectionInfo
+              title={`Total Appointments`}
+              count={appointments.length * 14}
+              percentage={`+67%`}
+              icon={ClipboardClock}
+              iconColor={`bg-blue-100 text-blue-600`}
+              percentageColor={`bg-emerald-500`}
+              dataLoading={doctorLoading}
+            />
+          </NavLink>
           <DoctorSectionInfo
             title={`Online Consultations`}
             count={appointments.length * 11}
@@ -66,15 +69,17 @@ function ListDoctors() {
             percentageColor={`bg-rose-500`}
             dataLoading={doctorLoading}
           />
-          <DoctorSectionInfo
-            title={`Cancelled Appointments`}
-            count={appointments.length * 4}
-            percentage={`+45%`}
-            icon={BookX}
-            iconColor={`bg-rose-100 text-rose-600`}
-            percentageColor={`bg-emerald-500`}
-            dataLoading={doctorLoading}
-          />
+          <NavLink to="/appointments">
+            <DoctorSectionInfo
+              title={`Cancelled Appointments`}
+              count={appointments.length * 4}
+              percentage={`+45%`}
+              icon={BookX}
+              iconColor={`bg-rose-100 text-rose-600`}
+              percentageColor={`bg-emerald-500`}
+              dataLoading={doctorLoading}
+            />
+          </NavLink>
         </div>
       </section>
 

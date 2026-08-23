@@ -1,5 +1,6 @@
 import React from "react";
 import { Loader2 } from "lucide-react";
+import {getDoctors, getPatients} from '../api'
 
 function DoctorSectionInfo({
   title,
