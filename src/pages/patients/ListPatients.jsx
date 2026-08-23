@@ -11,12 +11,14 @@ import {
   Scale,
   Wind,
   Thermometer,
+  MoveRight
 } from "lucide-react";
 import DoctorSectionInfo from "../../components/DoctorSectionInfo";
 import { getAppointments, getDoctors, getPatients } from "../../api";
 import PopularCards from "../../components/PopularCards";
 import Patient_vitals from "../../components/Patient_vitals";
 import Table from "../../components/Table";
+import { NavLink } from "react-router-dom";
 
 function ListPatients() {
   const [patients, setPatients] = useState([]);
@@ -97,18 +99,26 @@ function ListPatients() {
             My Doctors
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-            {doctors.map((doctor) => (
-              <div key={doctor.id}>
-                <PopularCards
-                  avatar={doctor.image}
-                  name={doctor.name}
-                  profession={doctor.specialization}
-                  status={doctor.status}
-                  bookings={doctor.patients}
-                />
-              </div>
-            )).splice(0, 8)}
+            {doctors
+              .map((doctor) => (
+                <div key={doctor.id}>
+                  <PopularCards
+                    avatar={doctor.image}
+                    name={doctor.name}
+                    profession={doctor.specialization}
+                    status={doctor.status}
+                    bookings={doctor.patients}
+                  />
+                </div>
+              ))
+              .splice(0, 8)}
           </div>
+          <button className="border border-transparent shadow shadow-gray-400 bg-white mt-2 py-2 px-3 m-auto flex rounded-md text-[14px] sm:text-[16px] hover:border-blue-500 hover:text-blue-700 hover:bg-blue-50 transition-all">
+            <NavLink to="/grid_doctors" className={`flex items-center gap-1.5`}>
+              Load More
+              <MoveRight size={`20`} />
+            </NavLink>
+          </button>
         </div>
       </section>
 
@@ -135,7 +145,7 @@ function ListPatients() {
             <Patient_vitals
               icon={Scale}
               title={`BMI`}
-              count={doctors.length * .8}
+              count={doctors.length * 0.8}
               unit={`kg/cm`}
             />
             <Patient_vitals

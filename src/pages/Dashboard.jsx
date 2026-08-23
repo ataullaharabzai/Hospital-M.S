@@ -8,9 +8,11 @@ import {
   HeartPlus,
   LayoutDashboard,
   UserRound,
+  MoveRight
 } from "lucide-react";
 import PopularCards from "../components/PopularCards.jsx";
 import Table from "../components/Table.jsx";
+import { NavLink } from "react-router-dom";
 
 function Dashboard() {
   const [doctors, setDoctors] = useState([]);
@@ -98,25 +100,33 @@ function Dashboard() {
             Popular Doctors
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-            {doctors.map((doctor) => (
-              <div key={doctor.id}>
-                <PopularCards
-                  avatar={doctor.image}
-                  name={doctor.name}
-                  profession={doctor.specialization}
-                  status={doctor.status}
-                  bookings={doctor.patients}
-                />
-              </div>
-            )).splice(0, 8)}
+            {doctors
+              .map((doctor) => (
+                <div key={doctor.id}>
+                  <PopularCards
+                    avatar={doctor.image}
+                    name={doctor.name}
+                    profession={doctor.specialization}
+                    status={doctor.status}
+                    bookings={doctor.patients}
+                  />
+                </div>
+              ))
+              .splice(0, 8)}
           </div>
+          <button className="border border-transparent shadow shadow-gray-400 bg-white mt-2 py-2 px-3 m-auto flex rounded-md text-[14px] sm:text-[16px] hover:border-blue-500 hover:text-blue-700 hover:bg-blue-50 transition-all">
+            <NavLink to="/grid_doctors" className={`flex items-center gap-1.5`}>
+              Load More
+              <MoveRight size={`20`}/>
+            </NavLink>
+          </button>
         </div>
       </section>
 
       {/* Appointments table section */}
       <section>
         <Table
-        title={`All Appointments`}
+          title={`All Appointments`}
           appointments={appointments}
           doctors={doctors}
           patients={patients}
@@ -134,17 +144,19 @@ function Dashboard() {
             Most recent patients
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-            {patients.map((patient) => (
-              <div key={patient.id}>
-                <PopularCards
-                  avatar={patient.image}
-                  name={patient.name}
-                  disease={patient.disease}
-                  phone={patient.phone}
-                  gender={patient.gender}
-                />
-              </div>
-            )).splice(0, 8)}
+            {patients
+              .map((patient) => (
+                <div key={patient.id}>
+                  <PopularCards
+                    avatar={patient.image}
+                    name={patient.name}
+                    disease={patient.disease}
+                    phone={patient.phone}
+                    gender={patient.gender}
+                  />
+                </div>
+              ))
+              .splice(0, 8)}
           </div>
         </div>
       </section>
