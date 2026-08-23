@@ -1,54 +1,872 @@
 [
   {
     "id": 1,
-    "name": "John Smith",
-    "age": 35,
+    "name": "Ahmad Khan",
+    "age": 52,
     "gender": "Male",
     "bloodGroup": "A+",
     "disease": "Hypertension",
-    "doctor": "Dr. Sarah Wilson",
+    "doctor": "Dr. Ahmad Rahimi",
     "admitted": true,
     "room": "A-101",
-    "phone": "+1 555-3010",
-    "image": "https://randomuser.me/api/portraits/men/10.jpg"
+    "phone": "+93 70 301 1001",
+    "image": "https://randomuser.me/api/portraits/men/10.jpg",
+    "vitals": {
+      "bloodPressure": "145/92",
+      "heartRate": 82,
+      "temperature": 36.8,
+      "oxygenSaturation": 97,
+      "weight": 78,
+      "height": 172,
+      "bmi": 26.4,
+      "respiratoryRate": 17
+    },
+    "lastVisit": "2026-08-20",
+    "emergencyContact": {
+      "name": "Wali Khan",
+      "relationship": "Brother",
+      "phone": "+93 70 555 1200"
+    }
   },
   {
     "id": 2,
-    "name": "Emily Johnson",
-    "age": 27,
+    "name": "Maryam Noori",
+    "age": 29,
     "gender": "Female",
     "bloodGroup": "O+",
     "disease": "Migraine",
-    "doctor": "Dr. James Carter",
+    "doctor": "Dr. Farid Ahmadzai",
     "admitted": false,
     "room": "-",
-    "phone": "+1 555-3011",
-    "image": "https://randomuser.me/api/portraits/women/40.jpg"
+    "phone": "+93 71 301 1002",
+    "image": "https://randomuser.me/api/portraits/women/40.jpg",
+    "vitals": {
+      "bloodPressure": "118/76",
+      "heartRate": 74,
+      "temperature": 36.6,
+      "oxygenSaturation": 99,
+      "weight": 61,
+      "height": 163,
+      "bmi": 22.9,
+      "respiratoryRate": 16
+    },
+    "lastVisit": "2026-08-21",
+    "emergencyContact": {
+      "name": "Zahra Noori",
+      "relationship": "Sister",
+      "phone": "+93 71 555 1201"
+    }
   },
   {
     "id": 3,
-    "name": "David Lee",
-    "age": 49,
+    "name": "Mohammad Omar",
+    "age": 46,
     "gender": "Male",
     "bloodGroup": "B+",
-    "disease": "Fracture",
-    "doctor": "Dr. Michael Johnson",
+    "disease": "Knee Fracture",
+    "doctor": "Dr. Abdul Wahid Khan",
     "admitted": true,
     "room": "B-205",
-    "phone": "+1 555-3012",
-    "image": "https://randomuser.me/api/portraits/men/60.jpg"
+    "phone": "+93 72 301 1003",
+    "image": "https://randomuser.me/api/portraits/men/60.jpg",
+    "vitals": {
+      "bloodPressure": "132/84",
+      "heartRate": 88,
+      "temperature": 37.1,
+      "oxygenSaturation": 96,
+      "weight": 84,
+      "height": 178,
+      "bmi": 26.5,
+      "respiratoryRate": 18
+    },
+    "lastVisit": "2026-08-22",
+    "emergencyContact": {
+      "name": "Hamid Omar",
+      "relationship": "Brother",
+      "phone": "+93 72 555 1202"
+    }
   },
   {
     "id": 4,
-    "name": "Sophia White",
-    "age": 18,
+    "name": "Fatima Ahmadi",
+    "age": 24,
     "gender": "Female",
     "bloodGroup": "AB+",
-    "disease": "Fever",
-    "doctor": "Dr. Emily Brown",
+    "disease": "Acne",
+    "doctor": "Dr. Amina Waziri",
     "admitted": false,
     "room": "-",
-    "phone": "+1 555-3013",
-    "image": "https://randomuser.me/api/portraits/women/65.jpg"
+    "phone": "+93 73 301 1004",
+    "image": "https://randomuser.me/api/portraits/women/65.jpg",
+    "vitals": {
+      "bloodPressure": "112/72",
+      "heartRate": 70,
+      "temperature": 36.5,
+      "oxygenSaturation": 99,
+      "weight": 56,
+      "height": 160,
+      "bmi": 21.9,
+      "respiratoryRate": 15
+    },
+    "lastVisit": "2026-08-19",
+    "emergencyContact": {
+      "name": "Nadia Ahmadi",
+      "relationship": "Sister",
+      "phone": "+93 73 555 1203"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Abdul Hadi",
+    "age": 61,
+    "gender": "Male",
+    "bloodGroup": "O-",
+    "disease": "Diabetes",
+    "doctor": "Dr. Mohammad Yousuf",
+    "admitted": true,
+    "room": "C-112",
+    "phone": "+93 74 301 1005",
+    "image": "https://randomuser.me/api/portraits/men/21.jpg",
+    "vitals": {
+      "bloodPressure": "138/86",
+      "heartRate": 79,
+      "temperature": 37.0,
+      "oxygenSaturation": 96,
+      "weight": 86,
+      "height": 170,
+      "bmi": 29.8,
+      "respiratoryRate": 18
+    },
+    "lastVisit": "2026-08-22",
+    "emergencyContact": {
+      "name": "Naseer Hadi",
+      "relationship": "Son",
+      "phone": "+93 74 555 1204"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Aisha Rahman",
+    "age": 31,
+    "gender": "Female",
+    "bloodGroup": "A-",
+    "disease": "Pregnancy Complication",
+    "doctor": "Dr. Laila Ahmadi",
+    "admitted": true,
+    "room": "D-104",
+    "phone": "+93 75 301 1006",
+    "image": "https://randomuser.me/api/portraits/women/22.jpg",
+    "vitals": {
+      "bloodPressure": "126/80",
+      "heartRate": 86,
+      "temperature": 36.9,
+      "oxygenSaturation": 98,
+      "weight": 68,
+      "height": 165,
+      "bmi": 25.0,
+      "respiratoryRate": 17
+    },
+    "lastVisit": "2026-08-23",
+    "emergencyContact": {
+      "name": "Rahman Khan",
+      "relationship": "Husband",
+      "phone": "+93 75 555 1205"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Samiullah Khan",
+    "age": 58,
+    "gender": "Male",
+    "bloodGroup": "B-",
+    "disease": "Cataract",
+    "doctor": "Dr. Hamidullah Noori",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 76 301 1007",
+    "image": "https://randomuser.me/api/portraits/men/35.jpg",
+    "vitals": {
+      "bloodPressure": "130/82",
+      "heartRate": 76,
+      "temperature": 36.7,
+      "oxygenSaturation": 97,
+      "weight": 73,
+      "height": 169,
+      "bmi": 25.6,
+      "respiratoryRate": 16
+    },
+    "lastVisit": "2026-08-18",
+    "emergencyContact": {
+      "name": "Jamal Khan",
+      "relationship": "Son",
+      "phone": "+93 76 555 1206"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Zainab Safi",
+    "age": 34,
+    "gender": "Female",
+    "bloodGroup": "O+",
+    "disease": "Anxiety Disorder",
+    "doctor": "Dr. Zainab Mohammadi",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 77 301 1008",
+    "image": "https://randomuser.me/api/portraits/women/31.jpg",
+    "vitals": {
+      "bloodPressure": "120/78",
+      "heartRate": 91,
+      "temperature": 36.6,
+      "oxygenSaturation": 98,
+      "weight": 59,
+      "height": 162,
+      "bmi": 22.5,
+      "respiratoryRate": 19
+    },
+    "lastVisit": "2026-08-20",
+    "emergencyContact": {
+      "name": "Nasir Safi",
+      "relationship": "Brother",
+      "phone": "+93 77 555 1207"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Abdul Basir",
+    "age": 45,
+    "gender": "Male",
+    "bloodGroup": "A+",
+    "disease": "Gastritis",
+    "doctor": "Dr. Abdul Basir Popalzai",
+    "admitted": true,
+    "room": "A-203",
+    "phone": "+93 78 301 1009",
+    "image": "https://randomuser.me/api/portraits/men/45.jpg",
+    "vitals": {
+      "bloodPressure": "128/80",
+      "heartRate": 80,
+      "temperature": 37.2,
+      "oxygenSaturation": 97,
+      "weight": 81,
+      "height": 175,
+      "bmi": 26.4,
+      "respiratoryRate": 17
+    },
+    "lastVisit": "2026-08-22",
+    "emergencyContact": {
+      "name": "Sami Popalzai",
+      "relationship": "Brother",
+      "phone": "+93 78 555 1208"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Hafizullah Noori",
+    "age": 55,
+    "gender": "Male",
+    "bloodGroup": "AB-",
+    "disease": "Type 2 Diabetes",
+    "doctor": "Dr. Fatima Noorzai",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 79 301 1010",
+    "image": "https://randomuser.me/api/portraits/men/51.jpg",
+    "vitals": {
+      "bloodPressure": "142/88",
+      "heartRate": 84,
+      "temperature": 36.9,
+      "oxygenSaturation": 96,
+      "weight": 91,
+      "height": 174,
+      "bmi": 30.1,
+      "respiratoryRate": 18
+    },
+    "lastVisit": "2026-08-17",
+    "emergencyContact": {
+      "name": "Farid Noori",
+      "relationship": "Son",
+      "phone": "+93 79 555 1209"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Omid Ahmad",
+    "age": 39,
+    "gender": "Male",
+    "bloodGroup": "B+",
+    "disease": "Kidney Stones",
+    "doctor": "Dr. Omar Khan",
+    "admitted": true,
+    "room": "B-110",
+    "phone": "+93 70 301 1011",
+    "image": "https://randomuser.me/api/portraits/men/53.jpg",
+    "vitals": {
+      "bloodPressure": "124/79",
+      "heartRate": 87,
+      "temperature": 37.3,
+      "oxygenSaturation": 97,
+      "weight": 76,
+      "height": 171,
+      "bmi": 26.0,
+      "respiratoryRate": 18
+    },
+    "lastVisit": "2026-08-23",
+    "emergencyContact": {
+      "name": "Farooq Ahmad",
+      "relationship": "Brother",
+      "phone": "+93 70 555 1210"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Shukria Waziri",
+    "age": 42,
+    "gender": "Female",
+    "bloodGroup": "A+",
+    "disease": "Asthma",
+    "doctor": "Dr. Shabnam Waziri",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 71 301 1012",
+    "image": "https://randomuser.me/api/portraits/women/45.jpg",
+    "vitals": {
+      "bloodPressure": "116/74",
+      "heartRate": 83,
+      "temperature": 36.7,
+      "oxygenSaturation": 95,
+      "weight": 64,
+      "height": 161,
+      "bmi": 24.7,
+      "respiratoryRate": 21
+    },
+    "lastVisit": "2026-08-21",
+    "emergencyContact": {
+      "name": "Amina Waziri",
+      "relationship": "Sister",
+      "phone": "+93 71 555 1211"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Nasir Ahmad",
+    "age": 48,
+    "gender": "Male",
+    "bloodGroup": "O+",
+    "disease": "Chronic Kidney Disease",
+    "doctor": "Dr. Nasir Ahmad Safi",
+    "admitted": true,
+    "room": "C-204",
+    "phone": "+93 72 301 1013",
+    "image": "https://randomuser.me/api/portraits/men/64.jpg",
+    "vitals": {
+      "bloodPressure": "150/94",
+      "heartRate": 81,
+      "temperature": 36.8,
+      "oxygenSaturation": 96,
+      "weight": 82,
+      "height": 176,
+      "bmi": 26.5,
+      "respiratoryRate": 18
+    },
+    "lastVisit": "2026-08-22",
+    "emergencyContact": {
+      "name": "Safiullah Ahmad",
+      "relationship": "Son",
+      "phone": "+93 72 555 1212"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Humaira Khan",
+    "age": 51,
+    "gender": "Female",
+    "bloodGroup": "O-",
+    "disease": "Breast Cancer",
+    "doctor": "Dr. Humaira Stanikzai",
+    "admitted": true,
+    "room": "D-201",
+    "phone": "+93 73 301 1014",
+    "image": "https://randomuser.me/api/portraits/women/52.jpg",
+    "vitals": {
+      "bloodPressure": "134/85",
+      "heartRate": 89,
+      "temperature": 37.0,
+      "oxygenSaturation": 96,
+      "weight": 70,
+      "height": 158,
+      "bmi": 28.0,
+      "respiratoryRate": 19
+    },
+    "lastVisit": "2026-08-23",
+    "emergencyContact": {
+      "name": "Fahad Khan",
+      "relationship": "Son",
+      "phone": "+93 73 555 1213"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Ibrahim Hashimi",
+    "age": 37,
+    "gender": "Male",
+    "bloodGroup": "A-",
+    "disease": "Lung Infection",
+    "doctor": "Dr. Sayed Ibrahim Hashimi",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 74 301 1015",
+    "image": "https://randomuser.me/api/portraits/men/76.jpg",
+    "vitals": {
+      "bloodPressure": "122/78",
+      "heartRate": 85,
+      "temperature": 37.5,
+      "oxygenSaturation": 94,
+      "weight": 75,
+      "height": 173,
+      "bmi": 25.1,
+      "respiratoryRate": 20
+    },
+    "lastVisit": "2026-08-20",
+    "emergencyContact": {
+      "name": "Sayed Hamid",
+      "relationship": "Brother",
+      "phone": "+93 74 555 1214"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Ruqayya Hamdard",
+    "age": 28,
+    "gender": "Female",
+    "bloodGroup": "AB+",
+    "disease": "Sinusitis",
+    "doctor": "Dr. Ruqayya Hamdard",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 75 301 1016",
+    "image": "https://randomuser.me/api/portraits/women/55.jpg",
+    "vitals": {
+      "bloodPressure": "114/73",
+      "heartRate": 72,
+      "temperature": 36.9,
+      "oxygenSaturation": 98,
+      "weight": 55,
+      "height": 159,
+      "bmi": 21.8,
+      "respiratoryRate": 16
+    },
+    "lastVisit": "2026-08-18",
+    "emergencyContact": {
+      "name": "Hamdard Ahmad",
+      "relationship": "Brother",
+      "phone": "+93 75 555 1215"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Abdul Rahman",
+    "age": 63,
+    "gender": "Male",
+    "bloodGroup": "B+",
+    "disease": "Appendicitis",
+    "doctor": "Dr. Abdul Rahman Wardak",
+    "admitted": true,
+    "room": "A-305",
+    "phone": "+93 76 301 1017",
+    "image": "https://randomuser.me/api/portraits/men/72.jpg",
+    "vitals": {
+      "bloodPressure": "129/83",
+      "heartRate": 94,
+      "temperature": 38.1,
+      "oxygenSaturation": 97,
+      "weight": 79,
+      "height": 170,
+      "bmi": 27.3,
+      "respiratoryRate": 20
+    },
+    "lastVisit": "2026-08-23",
+    "emergencyContact": {
+      "name": "Zahir Wardak",
+      "relationship": "Son",
+      "phone": "+93 76 555 1216"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Nasrin Mohseni",
+    "age": 47,
+    "gender": "Female",
+    "bloodGroup": "A+",
+    "disease": "Arthritis",
+    "doctor": "Dr. Nasrin Mohseni",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 77 301 1018",
+    "image": "https://randomuser.me/api/portraits/women/61.jpg",
+    "vitals": {
+      "bloodPressure": "128/81",
+      "heartRate": 78,
+      "temperature": 36.6,
+      "oxygenSaturation": 98,
+      "weight": 67,
+      "height": 160,
+      "bmi": 26.2,
+      "respiratoryRate": 16
+    },
+    "lastVisit": "2026-08-19",
+    "emergencyContact": {
+      "name": "Hamid Mohseni",
+      "relationship": "Husband",
+      "phone": "+93 77 555 1217"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Ahmad Shinwari",
+    "age": 32,
+    "gender": "Male",
+    "bloodGroup": "O+",
+    "disease": "Chest Pain",
+    "doctor": "Dr. Ahmad Shah Shinwari",
+    "admitted": true,
+    "room": "ER-04",
+    "phone": "+93 78 301 1019",
+    "image": "https://randomuser.me/api/portraits/men/78.jpg",
+    "vitals": {
+      "bloodPressure": "148/90",
+      "heartRate": 102,
+      "temperature": 36.9,
+      "oxygenSaturation": 95,
+      "weight": 88,
+      "height": 180,
+      "bmi": 27.2,
+      "respiratoryRate": 21
+    },
+    "lastVisit": "2026-08-23",
+    "emergencyContact": {
+      "name": "Sultan Shinwari",
+      "relationship": "Brother",
+      "phone": "+93 78 555 1218"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Ayesha Khan",
+    "age": 40,
+    "gender": "Female",
+    "bloodGroup": "B+",
+    "disease": "Flu",
+    "doctor": "Dr. Ayesha Khan",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 79 301 1020",
+    "image": "https://randomuser.me/api/portraits/women/63.jpg",
+    "vitals": {
+      "bloodPressure": "119/77",
+      "heartRate": 80,
+      "temperature": 38.0,
+      "oxygenSaturation": 97,
+      "weight": 62,
+      "height": 164,
+      "bmi": 23.1,
+      "respiratoryRate": 18
+    },
+    "lastVisit": "2026-08-22",
+    "emergencyContact": {
+      "name": "Sadia Khan",
+      "relationship": "Sister",
+      "phone": "+93 79 555 1219"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Samiullah Arabzai",
+    "age": 59,
+    "gender": "Male",
+    "bloodGroup": "A+",
+    "disease": "Gallstones",
+    "doctor": "Dr. Samiullah Arabzai",
+    "admitted": true,
+    "room": "B-301",
+    "phone": "+93 70 301 1021",
+    "image": "https://randomuser.me/api/portraits/men/82.jpg",
+    "vitals": {
+      "bloodPressure": "136/84",
+      "heartRate": 90,
+      "temperature": 37.4,
+      "oxygenSaturation": 96,
+      "weight": 83,
+      "height": 175,
+      "bmi": 27.1,
+      "respiratoryRate": 18
+    },
+    "lastVisit": "2026-08-23",
+    "emergencyContact": {
+      "name": "Najeeb Arabzai",
+      "relationship": "Son",
+      "phone": "+93 70 555 1220"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Mariam Qadiri",
+    "age": 30,
+    "gender": "Female",
+    "bloodGroup": "O+",
+    "disease": "Pregnancy",
+    "doctor": "Dr. Mariam Qadiri",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 71 301 1022",
+    "image": "https://randomuser.me/api/portraits/women/67.jpg",
+    "vitals": {
+      "bloodPressure": "121/79",
+      "heartRate": 84,
+      "temperature": 36.7,
+      "oxygenSaturation": 98,
+      "weight": 71,
+      "height": 164,
+      "bmi": 26.4,
+      "respiratoryRate": 17
+    },
+    "lastVisit": "2026-08-21",
+    "emergencyContact": {
+      "name": "Ahmad Qadiri",
+      "relationship": "Husband",
+      "phone": "+93 71 555 1221"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Khalid Afghan",
+    "age": 44,
+    "gender": "Male",
+    "bloodGroup": "B-",
+    "disease": "Pneumonia",
+    "doctor": "Dr. Khalid Afghan",
+    "admitted": true,
+    "room": "C-105",
+    "phone": "+93 72 301 1023",
+    "image": "https://randomuser.me/api/portraits/men/83.jpg",
+    "vitals": {
+      "bloodPressure": "130/82",
+      "heartRate": 96,
+      "temperature": 38.4,
+      "oxygenSaturation": 92,
+      "weight": 80,
+      "height": 177,
+      "bmi": 25.5,
+      "respiratoryRate": 23
+    },
+    "lastVisit": "2026-08-23",
+    "emergencyContact": {
+      "name": "Nisar Afghan",
+      "relationship": "Brother",
+      "phone": "+93 72 555 1222"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Farzana Safi",
+    "age": 26,
+    "gender": "Female",
+    "bloodGroup": "AB+",
+    "disease": "Skin Condition",
+    "doctor": "Dr. Farzana Safi",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 73 301 1024",
+    "image": "https://randomuser.me/api/portraits/women/71.jpg",
+    "vitals": {
+      "bloodPressure": "110/70",
+      "heartRate": 69,
+      "temperature": 36.5,
+      "oxygenSaturation": 99,
+      "weight": 53,
+      "height": 157,
+      "bmi": 21.5,
+      "respiratoryRate": 15
+    },
+    "lastVisit": "2026-08-17",
+    "emergencyContact": {
+      "name": "Nasir Safi",
+      "relationship": "Brother",
+      "phone": "+93 73 555 1223"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Wali Khan",
+    "age": 70,
+    "gender": "Male",
+    "bloodGroup": "O+",
+    "disease": "Heart Failure",
+    "doctor": "Dr. Ahmad Rahimi",
+    "admitted": true,
+    "room": "A-115",
+    "phone": "+93 74 301 1025",
+    "image": "https://randomuser.me/api/portraits/men/67.jpg",
+    "vitals": {
+      "bloodPressure": "155/96",
+      "heartRate": 92,
+      "temperature": 36.8,
+      "oxygenSaturation": 93,
+      "weight": 91,
+      "height": 168,
+      "bmi": 32.2,
+      "respiratoryRate": 22
+    },
+    "lastVisit": "2026-08-23",
+    "emergencyContact": {
+      "name": "Ahmad Khan",
+      "relationship": "Son",
+      "phone": "+93 74 555 1224"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Sahar Gul",
+    "age": 23,
+    "gender": "Female",
+    "bloodGroup": "A+",
+    "disease": "Migraine",
+    "doctor": "Dr. Farid Ahmadzai",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 75 301 1026",
+    "image": "https://randomuser.me/api/portraits/women/73.jpg",
+    "vitals": {
+      "bloodPressure": "115/72",
+      "heartRate": 73,
+      "temperature": 36.4,
+      "oxygenSaturation": 99,
+      "weight": 52,
+      "height": 158,
+      "bmi": 20.8,
+      "respiratoryRate": 15
+    },
+    "lastVisit": "2026-08-20",
+    "emergencyContact": {
+      "name": "Sami Gul",
+      "relationship": "Brother",
+      "phone": "+93 75 555 1225"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Zubair Khan",
+    "age": 41,
+    "gender": "Male",
+    "bloodGroup": "B+",
+    "disease": "Back Pain",
+    "doctor": "Dr. Abdul Wahid Khan",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 76 301 1027",
+    "image": "https://randomuser.me/api/portraits/men/69.jpg",
+    "vitals": {
+      "bloodPressure": "127/81",
+      "heartRate": 77,
+      "temperature": 36.6,
+      "oxygenSaturation": 98,
+      "weight": 87,
+      "height": 181,
+      "bmi": 26.6,
+      "respiratoryRate": 16
+    },
+    "lastVisit": "2026-08-19",
+    "emergencyContact": {
+      "name": "Faisal Khan",
+      "relationship": "Brother",
+      "phone": "+93 76 555 1226"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Nadia Ahmad",
+    "age": 36,
+    "gender": "Female",
+    "bloodGroup": "O-",
+    "disease": "Eczema",
+    "doctor": "Dr. Amina Waziri",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 77 301 1028",
+    "image": "https://randomuser.me/api/portraits/women/75.jpg",
+    "vitals": {
+      "bloodPressure": "117/75",
+      "heartRate": 75,
+      "temperature": 36.7,
+      "oxygenSaturation": 98,
+      "weight": 63,
+      "height": 162,
+      "bmi": 24.0,
+      "respiratoryRate": 16
+    },
+    "lastVisit": "2026-08-18",
+    "emergencyContact": {
+      "name": "Shafiq Ahmad",
+      "relationship": "Husband",
+      "phone": "+93 77 555 1227"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Fazal Rahman",
+    "age": 57,
+    "gender": "Male",
+    "bloodGroup": "A+",
+    "disease": "High Blood Sugar",
+    "doctor": "Dr. Mohammad Yousuf",
+    "admitted": true,
+    "room": "C-118",
+    "phone": "+93 78 301 1029",
+    "image": "https://randomuser.me/api/portraits/men/71.jpg",
+    "vitals": {
+      "bloodPressure": "144/89",
+      "heartRate": 86,
+      "temperature": 37.1,
+      "oxygenSaturation": 96,
+      "weight": 94,
+      "height": 172,
+      "bmi": 31.8,
+      "respiratoryRate": 18
+    },
+    "lastVisit": "2026-08-22",
+    "emergencyContact": {
+      "name": "Naim Rahman",
+      "relationship": "Son",
+      "phone": "+93 78 555 1228"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Hina Gul",
+    "age": 33,
+    "gender": "Female",
+    "bloodGroup": "AB-",
+    "disease": "Pregnancy",
+    "doctor": "Dr. Laila Ahmadi",
+    "admitted": false,
+    "room": "-",
+    "phone": "+93 79 301 1030",
+    "image": "https://randomuser.me/api/portraits/women/76.jpg",
+    "vitals": {
+      "bloodPressure": "123/79",
+      "heartRate": 88,
+      "temperature": 36.8,
+      "oxygenSaturation": 98,
+      "weight": 69,
+      "height": 166,
+      "bmi": 25.0,
+      "respiratoryRate": 17
+    },
+    "lastVisit": "2026-08-22",
+    "emergencyContact": {
+      "name": "Rahim Gul",
+      "relationship": "Husband",
+      "phone": "+93 79 555 1229"
+    }
   }
 ]
