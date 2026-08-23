@@ -11,7 +11,7 @@ import {
   Scale,
   Wind,
   Thermometer,
-  MoveRight
+  MoveRight,
 } from "lucide-react";
 import DoctorSectionInfo from "../../components/DoctorSectionInfo";
 import { getAppointments, getDoctors, getPatients } from "../../api";
@@ -113,7 +113,7 @@ function ListPatients() {
               ))
               .splice(0, 8)}
           </div>
-          <button className="border border-transparent shadow shadow-gray-400 bg-white mt-2 py-2 px-3 m-auto flex rounded-md text-[14px] sm:text-[16px] hover:border-blue-500 hover:text-blue-700 hover:bg-blue-50 transition-all">
+          <button className="border border-transparent shadow shadow-gray-400 bg-white mt-2 py-2 px-3 m-auto flex rounded-md text-[14px] sm:text-[16px] hover:border-blue-500 hover:text-blue-700 hover:bg-blue-50 transition-all dark:bg-slate-800 dark:text-slate-200 dark:shadow-gray-900 dark:hover:border-blue-400 dark:hover:text-blue-400 dark:hover:bg-slate-700">
             <NavLink to="/grid_doctors" className={`flex items-center gap-1.5`}>
               Load More
               <MoveRight size={`20`} />
