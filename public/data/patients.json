@@ -10,6 +10,7 @@
     "admitted": true,
     "room": "A-101",
     "phone": "+93 70 301 1001",
+    "address": "Jalalabad, Nangarhar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/10.jpg",
     "vitals": {
       "bloodPressure": "145/92",
@@ -39,6 +40,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 71 301 1002",
+    "address": "Kabul, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/40.jpg",
     "vitals": {
       "bloodPressure": "118/76",
@@ -68,6 +70,7 @@
     "admitted": true,
     "room": "B-205",
     "phone": "+93 72 301 1003",
+    "address": "Kandahar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/60.jpg",
     "vitals": {
       "bloodPressure": "132/84",
@@ -97,6 +100,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 73 301 1004",
+    "address": "Herat, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/65.jpg",
     "vitals": {
       "bloodPressure": "112/72",
@@ -126,6 +130,7 @@
     "admitted": true,
     "room": "C-112",
     "phone": "+93 74 301 1005",
+    "address": "Mazar-i-Sharif, Balkh, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/21.jpg",
     "vitals": {
       "bloodPressure": "138/86",
@@ -155,6 +160,7 @@
     "admitted": true,
     "room": "D-104",
     "phone": "+93 75 301 1006",
+    "address": "Khost, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/22.jpg",
     "vitals": {
       "bloodPressure": "126/80",
@@ -184,6 +190,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 76 301 1007",
+    "address": "Laghman, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/35.jpg",
     "vitals": {
       "bloodPressure": "130/82",
@@ -213,6 +220,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 77 301 1008",
+    "address": "Nangarhar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/31.jpg",
     "vitals": {
       "bloodPressure": "120/78",
@@ -242,6 +250,7 @@
     "admitted": true,
     "room": "A-203",
     "phone": "+93 78 301 1009",
+    "address": "Ghazni, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/45.jpg",
     "vitals": {
       "bloodPressure": "128/80",
@@ -271,6 +280,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 79 301 1010",
+    "address": "Kunduz, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/51.jpg",
     "vitals": {
       "bloodPressure": "142/88",
@@ -300,6 +310,7 @@
     "admitted": true,
     "room": "B-110",
     "phone": "+93 70 301 1011",
+    "address": "Paktia, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/53.jpg",
     "vitals": {
       "bloodPressure": "124/79",
@@ -329,6 +340,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 71 301 1012",
+    "address": "Paktika, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/45.jpg",
     "vitals": {
       "bloodPressure": "116/74",
@@ -358,6 +370,7 @@
     "admitted": true,
     "room": "C-204",
     "phone": "+93 72 301 1013",
+    "address": "Kapisa, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/64.jpg",
     "vitals": {
       "bloodPressure": "150/94",
@@ -387,6 +400,7 @@
     "admitted": true,
     "room": "D-201",
     "phone": "+93 73 301 1014",
+    "address": "Logar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/52.jpg",
     "vitals": {
       "bloodPressure": "134/85",
@@ -416,6 +430,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 74 301 1015",
+    "address": "Parwan, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/76.jpg",
     "vitals": {
       "bloodPressure": "122/78",
@@ -445,6 +460,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 75 301 1016",
+    "address": "Bamyan, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/55.jpg",
     "vitals": {
       "bloodPressure": "114/73",
@@ -474,6 +490,7 @@
     "admitted": true,
     "room": "A-305",
     "phone": "+93 76 301 1017",
+    "address": "Wardak, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/72.jpg",
     "vitals": {
       "bloodPressure": "129/83",
@@ -503,6 +520,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 77 301 1018",
+    "address": "Baghlan, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/61.jpg",
     "vitals": {
       "bloodPressure": "128/81",
@@ -532,6 +550,7 @@
     "admitted": true,
     "room": "ER-04",
     "phone": "+93 78 301 1019",
+    "address": "Kunar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/78.jpg",
     "vitals": {
       "bloodPressure": "148/90",
@@ -561,6 +580,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 79 301 1020",
+    "address": "Nangarhar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/63.jpg",
     "vitals": {
       "bloodPressure": "119/77",
@@ -590,6 +610,7 @@
     "admitted": true,
     "room": "B-301",
     "phone": "+93 70 301 1021",
+    "address": "Nangarhar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/82.jpg",
     "vitals": {
       "bloodPressure": "136/84",
@@ -619,6 +640,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 71 301 1022",
+    "address": "Takhar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/67.jpg",
     "vitals": {
       "bloodPressure": "121/79",
@@ -648,6 +670,7 @@
     "admitted": true,
     "room": "C-105",
     "phone": "+93 72 301 1023",
+    "address": "Nangarhar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/83.jpg",
     "vitals": {
       "bloodPressure": "130/82",
@@ -677,6 +700,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 73 301 1024",
+    "address": "Faryab, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/71.jpg",
     "vitals": {
       "bloodPressure": "110/70",
@@ -706,6 +730,7 @@
     "admitted": true,
     "room": "A-115",
     "phone": "+93 74 301 1025",
+    "address": "Kabul, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/67.jpg",
     "vitals": {
       "bloodPressure": "155/96",
@@ -735,6 +760,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 75 301 1026",
+    "address": "Nuristan, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/73.jpg",
     "vitals": {
       "bloodPressure": "115/72",
@@ -764,6 +790,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 76 301 1027",
+    "address": "Kunar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/69.jpg",
     "vitals": {
       "bloodPressure": "127/81",
@@ -793,6 +820,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 77 301 1028",
+    "address": "Samangan, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/75.jpg",
     "vitals": {
       "bloodPressure": "117/75",
@@ -822,6 +850,7 @@
     "admitted": true,
     "room": "C-118",
     "phone": "+93 78 301 1029",
+    "address": "Helmand, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/71.jpg",
     "vitals": {
       "bloodPressure": "144/89",
@@ -851,6 +880,7 @@
     "admitted": false,
     "room": "-",
     "phone": "+93 79 301 1030",
+    "address": "Panjshir, Afghanistan",
     "image": "https://randomuser.me/api/portraits/women/76.jpg",
     "vitals": {
       "bloodPressure": "123/79",
