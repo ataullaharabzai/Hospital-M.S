@@ -86,7 +86,7 @@ function Login() {
         <div className="p-2 flex justify-center items-start flex-col gap-5">
           <h1 className="md:text-2xl font-semibold text-blue-700">Medicare</h1>
           <div>
-            <h1 className="md:text-[20px] font-semibold">Login</h1>
+            <h1 className="md:text-[20px] font-semibold dark:text-slate-800">Login</h1>
             <p className="text-[12px] md:text-[14px] text-gray-500">
               Enter your credentials to login to your account
             </p>
@@ -96,7 +96,7 @@ function Login() {
             className="w-full flex justify-center items-start gap-3 flex-col"
           >
             <div className="w-full">
-              <label className="text-[12px] md:text-[14px]">Email</label>
+              <label className="text-[12px] md:text-[14px] dark:text-slate-800">Email</label>
               <Input
                 placeholder={`admin@example.com`}
                 type={"email"}
@@ -107,7 +107,7 @@ function Login() {
               />
             </div>
             <div className="w-full">
-              <label className="text-[12px] md:text-[14px]">Password</label>
+              <label className="text-[12px] md:text-[14px] dark:text-slate-800">Password</label>
               <Input
                 type={"password"}
                 className={`border w-full p-1.5 rounded-sm border-gray-500`}
