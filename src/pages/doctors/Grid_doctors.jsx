@@ -16,7 +16,7 @@ function Grid_doctors() {
   if (loader) {
     return (
       <main>
-        <section>
+        <section className="w-full h-screen flex justify-center items-center">
           <div className="min-h-[50vh] flex items-center justify-center">
             <Spinner />
           </div>
