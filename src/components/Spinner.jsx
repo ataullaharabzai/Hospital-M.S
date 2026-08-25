@@ -1,8 +1,11 @@
 import React from 'react'
+import {Loader2} from 'lucide-react'
 
 function Spinner() {
   return (
-    <div>Spinner</div>
+    <div className='animate-spin'>
+      <Loader2 size={`40`} />
+    </div>
   )
 }
 
