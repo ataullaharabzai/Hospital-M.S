@@ -2,6 +2,7 @@ import React from "react";
 
 function Button({
   text,
+  title,
   children,
   onClick,
   type = "button",
@@ -11,6 +12,7 @@ function Button({
 }) {
   return (
     <button
+    title={title}
       type={type}
       onClick={onClick}
       disabled={disabled}
