@@ -3,8 +3,8 @@ import {Loader2} from 'lucide-react'
 
 function Spinner() {
   return (
-    <div className='animate-spin'>
-      <Loader2 size={`40`} />
+    <div className='w-full h-screen'>
+      <Loader2 size={`40`} className='animate-spin' />
     </div>
   )
 }
