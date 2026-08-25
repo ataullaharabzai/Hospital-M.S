@@ -1,3 +1,4 @@
+import { Loader, Loader2 } from "lucide-react";
 import React from "react";
 
 function StateCard({
@@ -8,6 +9,7 @@ function StateCard({
   className,
   iconColor,
   percentageColor,
+  loader,
 }) {
   const isPositive = percentage?.toString().startsWith("+");
   const badgeClass = isPositive
@@ -33,7 +35,7 @@ function StateCard({
         <div className="">
           <p className="text-sm text-slate-500 dark:text-slate-300">{name}</p>
           <p className="text-xl font-semibold text-slate-900 dark:text-slate-100">
-            {counter}
+            {loader ? <Loader2 className="animate-spin" /> : counter}
           </p>
         </div>
         <div className="text-sm text-slate-400 dark:text-slate-400">7 days</div>

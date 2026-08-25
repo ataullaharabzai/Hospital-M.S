@@ -19,17 +19,18 @@ function Dashboard() {
   const [patients, setPatients] = useState([]);
   const [appointments, setAppointments] = useState([]);
   const [nurses, setNurses] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    getDoctors().then(setDoctors);
+    getDoctors().then(setDoctors).finally(() => setLoading(false));
   }, []);
 
   useEffect(() => {
-    getPatients().then(setPatients);
+    getPatients().then(setPatients).finally(() => setLoading(false));
   }, []);
 
   useEffect(() => {
-    getAppointments().then(setAppointments);
+    getAppointments().then(setAppointments).finally(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -54,6 +55,7 @@ function Dashboard() {
               percentage={`+91%`}
               iconColor="bg-blue-100 text-blue-600"
               percentageColor="bg-emerald-600"
+              loader={loading}
             />
           </div>
           <div>
@@ -64,6 +66,7 @@ function Dashboard() {
               percentage={`+84%`}
               iconColor="bg-violet-100 text-violet-600"
               percentageColor="bg-emerald-600"
+              loader={loading}
             />
           </div>
           <div>
@@ -74,6 +77,7 @@ function Dashboard() {
               percentage={`-19%`}
               iconColor="bg-amber-100 text-amber-600"
               percentageColor="bg-rose-600"
+              loader={loading}
             />
           </div>
           <div>
