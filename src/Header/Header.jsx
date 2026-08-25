@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../images/NewLogo.png";
 import Avatar from "../components/Avatar";
 import Button from "../components/Button";
-import { Moon, Settings, Menu, X, Sun, Bell } from "lucide-react";
+import { Moon, Settings, Menu, X, Sun, Bell, LogOut } from "lucide-react";
 import profile from "../images/my_dark.jpeg";
 import { useTheme } from "../contexts/ThemeProvider";
 
@@ -17,6 +17,10 @@ const navItems = [
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { toggleTheme, darkMode } = useTheme();
+
+  const logoutHandler = () => {
+    localStorage.removeItem("user");
+  };
 
   return (
     <header className="w-full border-b border-slate-200 bg-white/90 text-slate-700 backdrop-blur-sm transition-colors duration-200 dark:border-slate-800 dark:bg-slate-900/85 dark:text-slate-100">
@@ -58,12 +62,16 @@ function Header() {
             <Button
               onClick={toggleTheme}
               className="border border-slate-300 bg-white text-slate-700 shadow-sm transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-2 rounded-full"
+              title={`Theme`}
             >
               {darkMode ? <Sun size={15} /> : <Moon size={15} />}
             </Button>
 
             <NavLink to={`/settings`}>
-              <Button className="border border-slate-300 bg-white text-slate-700 shadow-sm transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-2 rounded-full">
+              <Button
+                className="border border-slate-300 bg-white text-slate-700 shadow-sm transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-2 rounded-full"
+                title={`Settings`}
+              >
                 <Settings size={15} />
               </Button>
             </NavLink>
@@ -71,11 +79,25 @@ function Header() {
             <div className="relative">
               <span className="absolute inset-0 rounded-full border border-sky-400/60 animate-ping"></span>
 
-              <Button className="relative border border-slate-300 bg-white text-slate-700 shadow-sm transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-2 rounded-full">
+              <Button
+                className="relative border border-slate-300 bg-white text-slate-700 shadow-sm transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-2 rounded-full"
+                title={`Notifications`}
+              >
                 <Bell size={15} />
               </Button>
             </div>
-            <div className="w-8 h-8">
+
+            <NavLink to={``}>
+              <Button
+                className="border cursor-pointer border-slate-300 bg-white text-slate-700 shadow-sm transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 p-2 rounded-full"
+                onClick={logoutHandler}
+                title={`Logout`}
+              >
+                <LogOut size={15} />
+              </Button>
+            </NavLink>
+
+            <div className="w-8 h-8" title="Profile">
               <Avatar
                 src={profile}
                 alt={`User Profile`}
