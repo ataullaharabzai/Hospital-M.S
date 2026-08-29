@@ -19,6 +19,7 @@ import "@fontsource/poppins/700.css"; // Optional: Import bold weight
 import ThemeProvider from "./contexts/ThemeProvider.jsx";
 import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 import Unauthorized from "./pages/Unauthorized.jsx";
+import DoctorDetails from "./pages/doctors/DoctorDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,9 @@ const router = createBrowserRouter([
     children: [
       //Login:
       { index: true, element: <Login /> },
+
+      //Dashboard
+
       {
         element: <DashboardLayout />,
         children: [
@@ -38,7 +42,9 @@ const router = createBrowserRouter([
               </ProtectedRoute>
             ),
           },
+
           // Patients:
+
           {
             path: "patients",
             element: (
@@ -48,7 +54,9 @@ const router = createBrowserRouter([
             ),
           },
           { path: "grid_patients", element: <Grid_patients /> },
+
           //Doctor:
+
           {
             path: "doctors",
             element: (
@@ -58,16 +66,22 @@ const router = createBrowserRouter([
             ),
           },
           { path: "grid_doctors", element: <Grid_doctors /> },
+          { path: "doctor_details/:id", element: <DoctorDetails /> },
+
           //Appointments:
+
           { path: "appointments", element: <ListAppointments /> },
           { path: "appointments/new", element: <M_Appointments /> },
           { path: "appointments/edit/:id", element: <M_Appointments /> },
+
           //Settings:
+
           { path: "settings", element: <Settings /> },
+
           //Unauthorized message
         ],
       },
-      {path: 'unauthorized', element: <Unauthorized />}
+      { path: "unauthorized", element: <Unauthorized /> },
     ],
   },
 ]);
