@@ -23,8 +23,8 @@ function PopularCards({
   const statusClassName = statusClasses[normalizedStatus] || "text-slate-700";
 
   return (
-    <div className="flex justify-center items-start flex-col gap-4 rounded-xl border border-slate-200 bg-white p-3 shadow-sm transition-all hover:border-sky-500 dark:border-slate-700 dark:bg-slate-900/90 dark:shadow-slate-950/30">
-      <div className="flex justify-center items-center gap-2">
+    <div className="flex w-full flex-col items-start gap-4 rounded-xl border border-slate-200 bg-white p-3 shadow-sm transition-all hover:border-sky-500 dark:border-slate-700 dark:bg-slate-900/90 dark:shadow-slate-950/30">
+      <div className="flex w-full items-center gap-2 sm:justify-center">
         <div>
           <img
             src={avatar}
@@ -32,7 +32,7 @@ function PopularCards({
             className="lg:w-14 lg:h-14 w-10 h-10 rounded-full object-cover"
           />
         </div>
-        <div>
+        <div className="min-w-0 flex-1">
           <h1 className="text-[10px] font-semibold text-slate-800 dark:text-slate-100 lg:text-[12px]">
             {name}
           </h1>
@@ -41,7 +41,7 @@ function PopularCards({
           </p>
         </div>
       </div>
-      <div className="text-[10px] lg:text-[12px] flex justify-around items-center gap-2 w-full">
+      <div className="flex w-full flex-col items-start gap-2 text-[10px] lg:text-[12px] sm:flex-row sm:items-center sm:justify-around">
         <p className={`${statusClassName} `}>{status || phone}</p>
         <p className="text-slate-700 dark:text-slate-200">
           {bookings !== undefined
