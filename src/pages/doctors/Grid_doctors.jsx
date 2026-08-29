@@ -44,7 +44,7 @@ function Grid_doctors() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {doctors.map((doctor) => (
             <div key={doctor.id}>
-              <NavLink to={`/doctor_details/:${doctor.id}`}>
+              <NavLink to={`/doctor_details/${doctor.id}`}>
                 <Doctor
                   name={doctor.name}
                   profession={doctor.specialization}
