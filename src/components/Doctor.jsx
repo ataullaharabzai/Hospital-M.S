@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Avatar from "../components/Avatar";
 import Spinner from "./Spinner";
 
@@ -17,7 +17,7 @@ function Doctor({
       {loader ? (
         <Spinner />
       ) : (
-        <div className="border border-gray-200 shadow shadow-gray-200 p-3 rounded-md flex items-center gap-2 bg-white dark:bg-slate-900 dark:border-slate-700 dark:shadow-none">
+        <div className="border border-gray-200 shadow shadow-gray-200 p-3 rounded-md flex items-center gap-2 bg-white dark:bg-slate-900 dark:border-slate-700 dark:shadow-none hover:border-blue-500 transition-all hover:scale-102">
           <div>
             <img
               src={avatar}
