@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { getPatients } from "../../api";
-import { Bed, Calendar1, ChevronLeft, MapPin, Phone } from "lucide-react";
+import {
+  Activity,
+  Bed,
+  Calendar1,
+  ChevronLeft,
+  Droplet,
+  MapPin,
+  Phone,
+  UserPlus,
+  UserRound,
+} from "lucide-react";
 
 function PatientDetails() {
   const [patients, setPatients] = useState([]);
@@ -33,13 +43,14 @@ function PatientDetails() {
           <p>Patients List</p>
         </span>
       </NavLink>
+      {/* Heading section of patient details */}
       <section className="mt-2">
         <div className="flex flex-col gap-4 rounded-sm border border-gray-200 bg-white p-4 shadow-sm shadow-gray-200 transition-colors dark:border-slate-700 dark:bg-slate-900 dark:shadow-none sm:p-5 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <img
               src={selectedPatient.image}
               alt={selectedPatient.name}
-              className="h-24 w-24 rounded-lg object-cover sm:h-28 sm:w-28 lg:h-40 lg:w-40"
+              className="h-24 w-24 rounded-md object-cover sm:h-25 sm:w-25 lg:h-35 lg:w-35"
             />
 
             <div className="flex flex-col gap-2">
@@ -59,7 +70,12 @@ function PatientDetails() {
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
                 <div className="flex items-center gap-2 text-gray-500 dark:text-slate-300">
                   <Phone size={15} />
-                  <p className="text-sm">Phone : {selectedPatient.phone}</p>
+                  <p className="text-sm">
+                    Phone :{" "}
+                    <span className="text-slate-900">
+                      {selectedPatient.phone}
+                    </span>
+                  </p>
                 </div>
               </div>
 
@@ -67,7 +83,10 @@ function PatientDetails() {
                 <div className="flex items-center gap-2 text-gray-500 dark:text-slate-300">
                   <Calendar1 size={15} />
                   <p className="text-sm">
-                    Last Appointment : {selectedPatient.lastVisit}
+                    Last Appointment :{" "}
+                    <span className="text-slate-900">
+                      {selectedPatient.lastVisit}
+                    </span>
                   </p>
                 </div>
               </div>
@@ -88,9 +107,131 @@ function PatientDetails() {
             <p className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
               {selectedPatient.startFee}
             </p>
-            <button className="w-full rounded-sm border bg-rose-50 px-3 py-2 text-sm text-rose-500 transition hover:bg-rose-100 lg:w-auto">
+            <button className="w-full rounded-sm border bg-rose-50 px-2 py-1.5 text-sm text-rose-500 transition hover:bg-rose-100 lg:w-auto">
               Cancel Appointment
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <div className="grid gap-5 xl:grid-cols-[1.1fr_1.4fr]">
+          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
+            <div className="mb-5 border-b border-slate-200 pb-3">
+              <h2 className="text-[20px] font-semibold text-slate-800">
+                About
+              </h2>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  icon: UserPlus,
+                  label: "Doctor",
+                  value: selectedPatient.doctor,
+                  tone: "bg-sky-50 text-sky-600",
+                },
+                {
+                  icon: Droplet,
+                  label: "Blood Group",
+                  value: selectedPatient.bloodGroup,
+                  tone: "bg-rose-50 text-rose-600",
+                },
+                {
+                  icon: UserRound,
+                  label: "Gender",
+                  value: selectedPatient.gender,
+                  tone: "bg-violet-50 text-violet-600",
+                },
+                {
+                  icon: Activity,
+                  label: "Disease",
+                  value: selectedPatient.disease,
+                  tone: "bg-amber-50 text-amber-600",
+                },
+              ].map(({ icon: Icon, label, value, tone }) => (
+                <div
+                  key={label}
+                  className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3.5 transition hover:border-sky-200 hover:bg-sky-50/30"
+                >
+                  <div className={`rounded-full p-2.5 ${tone}`}>
+                    <Icon size={17} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-700">
+                      {label}
+                    </p>
+                    <p className="mt-1 text-sm text-slate-500">{value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
+            <div className="mb-5 border-b border-slate-200 pb-3">
+              <h2 className="text-[20px] font-semibold text-slate-800">
+                Vital Signs
+              </h2>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              {[
+                {
+                  icon: Activity,
+                  label: "Blood Pressure",
+                  value: selectedPatient.vitals.bloodPressure,
+                  tone: "bg-rose-50 text-rose-600",
+                },
+                {
+                  icon: Activity,
+                  label: "Heart Rate",
+                  value: selectedPatient.vitals.heartRate,
+                  tone: "bg-cyan-50 text-cyan-600",
+                },
+                {
+                  icon: Activity,
+                  label: "SPO2",
+                  value: selectedPatient.vitals.oxygenSaturation,
+                  tone: "bg-emerald-50 text-emerald-600",
+                },
+                {
+                  icon: Activity,
+                  label: "Temperature",
+                  value: selectedPatient.vitals.temperature,
+                  tone: "bg-amber-50 text-amber-600",
+                },
+                {
+                  icon: Activity,
+                  label: "Respiratory Rate",
+                  value: selectedPatient.vitals.respiratoryRate,
+                  tone: "bg-indigo-50 text-indigo-600",
+                },
+                {
+                  icon: Activity,
+                  label: "Weight",
+                  value: selectedPatient.vitals.weight,
+                  tone: "bg-slate-100 text-slate-600",
+                },
+              ].map(({ icon: Icon, label, value, tone }) => (
+                <div
+                  key={label}
+                  className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3.5 transition hover:border-sky-200 hover:bg-sky-50/30"
+                >
+                  <div className={`rounded-full p-2.5 ${tone}`}>
+                    <Icon size={17} />
+                  </div>
+                  <div>
+                    <p className="text-[13px] font-semibold uppercase tracking-wide text-slate-500">
+                      {label}
+                    </p>
+                    <p className="mt-1 text-sm font-medium text-slate-800">
+                      {value}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
