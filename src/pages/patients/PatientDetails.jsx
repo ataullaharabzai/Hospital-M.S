@@ -115,117 +115,119 @@ function PatientDetails() {
       </section>
 
       <section className="mt-8">
-        <div className="grid gap-5 xl:grid-cols-[1.1fr_1.4fr]">
-          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-            <div className="mb-5 border-b border-slate-200 pb-3">
-              <h2 className="text-[20px] font-semibold text-slate-800">
+        <div className="grid gap-4 md:gap-5 xl:grid-cols-[1.05fr_1.35fr]">
+          <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-colors dark:border-slate-700 dark:bg-slate-900 dark:shadow-none sm:p-5">
+            <div className="mb-4 border-b border-slate-200 pb-3 dark:border-slate-700">
+              <h2 className="text-lg font-semibold text-slate-800 dark:text-slate-100 sm:text-[20px]">
                 About
               </h2>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-3 sm:grid-cols-2">
               {[
                 {
                   icon: UserPlus,
                   label: "Doctor",
                   value: selectedPatient.doctor,
-                  tone: "bg-sky-50 text-sky-600",
+                  tone: "bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-400",
                 },
                 {
                   icon: Droplet,
                   label: "Blood Group",
                   value: selectedPatient.bloodGroup,
-                  tone: "bg-rose-50 text-rose-600",
+                  tone: "bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-400",
                 },
                 {
                   icon: UserRound,
                   label: "Gender",
                   value: selectedPatient.gender,
-                  tone: "bg-violet-50 text-violet-600",
+                  tone: "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400",
                 },
                 {
                   icon: Activity,
                   label: "Disease",
                   value: selectedPatient.disease,
-                  tone: "bg-amber-50 text-amber-600",
+                  tone: "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400",
                 },
               ].map(({ icon: Icon, label, value, tone }) => (
                 <div
                   key={label}
-                  className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3.5 transition hover:border-sky-200 hover:bg-sky-50/30"
+                  className="flex min-w-0 items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3.5 transition-colors hover:border-sky-200 hover:bg-sky-50/30 dark:border-slate-700 dark:bg-slate-800/90 dark:hover:border-sky-500/40 dark:hover:bg-slate-800"
                 >
-                  <div className={`rounded-full p-2.5 ${tone}`}>
+                  <div className={`shrink-0 rounded-full p-2.5 ${tone}`}>
                     <Icon size={17} />
                   </div>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-700">
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">
                       {label}
                     </p>
-                    <p className="mt-1 text-sm text-slate-500">{value}</p>
+                    <p className="mt-1 text-sm text-slate-500 dark:text-slate-300">
+                      {value}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-            <div className="mb-5 border-b border-slate-200 pb-3">
-              <h2 className="text-[20px] font-semibold text-slate-800">
+          <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-colors dark:border-slate-700 dark:bg-slate-900 dark:shadow-none sm:p-5">
+            <div className="mb-4 border-b border-slate-200 pb-3 dark:border-slate-700">
+              <h2 className="text-lg font-semibold text-slate-800 dark:text-slate-100 sm:text-[20px]">
                 Vital Signs
               </h2>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
               {[
                 {
                   icon: Activity,
                   label: "Blood Pressure",
                   value: selectedPatient.vitals.bloodPressure,
-                  tone: "bg-rose-50 text-rose-600",
+                  tone: "bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-400",
                 },
                 {
                   icon: Activity,
                   label: "Heart Rate",
                   value: selectedPatient.vitals.heartRate,
-                  tone: "bg-cyan-50 text-cyan-600",
+                  tone: "bg-cyan-50 text-cyan-600 dark:bg-cyan-500/10 dark:text-cyan-400",
                 },
                 {
                   icon: Activity,
                   label: "SPO2",
                   value: selectedPatient.vitals.oxygenSaturation,
-                  tone: "bg-emerald-50 text-emerald-600",
+                  tone: "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400",
                 },
                 {
                   icon: Activity,
                   label: "Temperature",
                   value: selectedPatient.vitals.temperature,
-                  tone: "bg-amber-50 text-amber-600",
+                  tone: "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400",
                 },
                 {
                   icon: Activity,
                   label: "Respiratory Rate",
                   value: selectedPatient.vitals.respiratoryRate,
-                  tone: "bg-indigo-50 text-indigo-600",
+                  tone: "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400",
                 },
                 {
                   icon: Activity,
                   label: "Weight",
                   value: selectedPatient.vitals.weight,
-                  tone: "bg-slate-100 text-slate-600",
+                  tone: "bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-200",
                 },
               ].map(({ icon: Icon, label, value, tone }) => (
                 <div
                   key={label}
-                  className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3.5 transition hover:border-sky-200 hover:bg-sky-50/30"
+                  className="flex min-w-0 items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3.5 transition-colors hover:border-sky-200 hover:bg-sky-50/30 dark:border-slate-700 dark:bg-slate-800/90 dark:hover:border-sky-500/40 dark:hover:bg-slate-800"
                 >
-                  <div className={`rounded-full p-2.5 ${tone}`}>
+                  <div className={`shrink-0 rounded-full p-2.5 ${tone}`}>
                     <Icon size={17} />
                   </div>
-                  <div>
-                    <p className="text-[13px] font-semibold uppercase tracking-wide text-slate-500">
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-300 sm:text-[11px]">
                       {label}
                     </p>
-                    <p className="mt-1 text-sm font-medium text-slate-800">
+                    <p className="mt-1 text-sm font-medium text-slate-800 dark:text-slate-100">
                       {value}
                     </p>
                   </div>
