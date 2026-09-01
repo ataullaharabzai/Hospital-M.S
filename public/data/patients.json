@@ -13,7 +13,7 @@
     "address": "Jalalabad, Nangarhar, Afghanistan",
     "image": "https://randomuser.me/api/portraits/men/10.jpg",
     "vitals": {
-      "bloodPressure": "145/92",
+      "bloodPressure": "145/92", 
       "heartRate": 82,
       "temperature": 36.8,
       "oxygenSaturation": 97,

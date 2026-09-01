@@ -14,7 +14,7 @@ import {
   Droplet,
   BriefcaseBusiness,
   UserRound,
-} from "lucide-react";
+} from "lucide-react"; 
 
 function DoctorDetails() {
   const [doctors, setDoctors] = useState([]);
