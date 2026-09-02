@@ -1,7 +1,12 @@
 export const API_URL = "/data";
 
 export const getDoctors = () => {
-  return fetch(`${API_URL}/doctors.json`).then((res) => res.json());
+  return fetch(`${API_URL}/doctors.json`)
+    .then((res) => res.json())
+    .then((doctors) => {
+      const newDoctor = JSON.parse(localStorage.getItem("doctors")) || [];
+      return [...doctors, ...newDoctor];
+    });
 };
 
 export const getPatients = () => {
