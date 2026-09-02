@@ -3,14 +3,20 @@ import { useParams, NavLink } from "react-router-dom";
 import { getPatients } from "../../api";
 import {
   Activity,
+  ActivityIcon,
   Bed,
   Calendar1,
   ChevronLeft,
   Droplet,
+  HeartPlus,
+  HeartPulse,
   MapPin,
   Phone,
+  Thermometer,
   UserPlus,
   UserRound,
+  WeightTilde,
+  Wind,
 } from "lucide-react";
 
 function PatientDetails() {
@@ -180,37 +186,37 @@ function PatientDetails() {
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
               {[
                 {
-                  icon: Activity,
+                  icon: HeartPulse,
                   label: "Blood Pressure",
                   value: selectedPatient.vitals.bloodPressure,
                   tone: "bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-400",
                 },
                 {
-                  icon: Activity,
+                  icon: ActivityIcon,
                   label: "Heart Rate",
                   value: selectedPatient.vitals.heartRate,
                   tone: "bg-cyan-50 text-cyan-600 dark:bg-cyan-500/10 dark:text-cyan-400",
                 },
                 {
-                  icon: Activity,
+                  icon: Droplet,
                   label: "SPO2",
                   value: selectedPatient.vitals.oxygenSaturation,
                   tone: "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400",
                 },
                 {
-                  icon: Activity,
+                  icon: Thermometer,
                   label: "Temperature",
                   value: selectedPatient.vitals.temperature,
                   tone: "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400",
                 },
                 {
-                  icon: Activity,
+                  icon: Wind,
                   label: "Respiratory Rate",
                   value: selectedPatient.vitals.respiratoryRate,
                   tone: "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400",
                 },
                 {
-                  icon: Activity,
+                  icon: WeightTilde,
                   label: "Weight",
                   value: selectedPatient.vitals.weight,
                   tone: "bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-200",
