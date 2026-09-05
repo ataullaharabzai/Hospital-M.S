@@ -21,6 +21,7 @@ import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 import Unauthorized from "./pages/Unauthorized.jsx";
 import DoctorDetails from "./pages/doctors/DoctorDetails.jsx";
 import PatientDetails from "./pages/patients/PatientDetails.jsx";
+import AddDoctor from "./pages/doctors/AddDoctor.jsx";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,7 @@ const router = createBrowserRouter([
           },
           { path: "grid_doctors", element: <Grid_doctors /> },
           { path: "doctor_details/:id", element: <DoctorDetails /> },
+          { path: "doctors/add", element: <AddDoctor /> },
 
           //Appointments:
 
