@@ -10,11 +10,22 @@ export const getDoctors = () => {
 };
 
 export const getPatients = () => {
-  return fetch(`${API_URL}/patients.json`).then((res) => res.json());
+  return fetch(`${API_URL}/patients.json`)
+    .then((res) => res.json())
+    .then((patients) => {
+      const newPatient = JSON.parse(localStorage.getItem("patients")) || [];
+      return [...patients, ...newPatient];
+    });
 };
 
 export const getAppointments = () => {
-  return fetch(`${API_URL}/appointments.json`).then((res) => res.json());
+  return fetch(`${API_URL}/appointments.json`)
+    .then((res) => res.json())
+    .then((appointments) => {
+      const newAppointment =
+        JSON.parse(localStorage.getItem("appointments")) || [];
+      return [...appointments, ...newAppointment];
+    });
 };
 
 export const getNurses = () => {
