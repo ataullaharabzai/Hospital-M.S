@@ -100,7 +100,7 @@ function Login() {
               <Input
                 placeholder={`admin@example.com`}
                 type={"email"}
-                className={`border w-full p-1.5 rounded-sm border-gray-500`}
+                className={`border w-full p-1.5 rounded-sm`}
                 value={formData.email}
                 onChange={handleChange}
                 name={`email`}
@@ -110,7 +110,8 @@ function Login() {
               <label className="text-[12px] md:text-[14px] dark:text-slate-800">Password</label>
               <Input
                 type={"password"}
-                className={`border w-full p-1.5 rounded-sm border-gray-500`}
+                placeholder={`******`}
+                className={`border w-full p-1.5 rounded-sm`}
                 value={formData.password}
                 onChange={handleChange}
                 name={`password`}

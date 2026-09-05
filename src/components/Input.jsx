@@ -12,7 +12,7 @@ function Input({ className, type, value, onChange, name, placeholder }) {
             placeholder:text-gray-400
             hover:border-gray-300
             focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10
-            dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200
+            dark:border-gray-700  dark:text-gray-800
             dark:placeholder:text-gray-500
             dark:hover:border-gray-600
             dark:focus:border-blue-500 ${className}`}
