@@ -22,6 +22,7 @@ import Unauthorized from "./pages/Unauthorized.jsx";
 import DoctorDetails from "./pages/doctors/DoctorDetails.jsx";
 import PatientDetails from "./pages/patients/PatientDetails.jsx";
 import AddDoctor from "./pages/doctors/AddDoctor.jsx";
+import AddPatient from "./pages/patients/AddPatient.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,7 @@ const router = createBrowserRouter([
           },
           { path: "grid_patients", element: <Grid_patients /> },
           { path: "patient_details/:id", element: <PatientDetails /> },
+          { path: "patients/add", element: <AddPatient /> },
 
           //Doctor:
 

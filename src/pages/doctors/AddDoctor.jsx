@@ -56,7 +56,7 @@ function AddDoctor() {
         email: formData.email,
         location: formData.location,
         dob: formData.dob,
-        bloodGroup: formData.bloodGroup,
+        bloodGroup: formData.bloodGroup, 
         gender: formData.gender,
       },
     };
