@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
-import { getPatients } from "../../api";
+import { useParams, NavLink, useNavigate } from "react-router-dom";
 import {
   Activity,
   ActivityIcon,
@@ -13,6 +12,7 @@ import {
   MapPin,
   Phone,
   Thermometer,
+  Trash2,
   UserPlus,
   UserRound,
   WeightTilde,
@@ -24,14 +24,25 @@ function PatientDetails() {
   const [loader, setLoader] = useState(true);
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const selectedPatient = patients.find((patient) => patient.id === Number(id));
 
   useEffect(() => {
-    getPatients()
-      .then(setPatients)
-      .finally(() => setLoader(false));
+    const savedPatients = JSON.parse(localStorage.getItem("patients")) || [];
+    setPatients(savedPatients);
+    setLoader(false);
   }, []);
+
+  const handleRemove = () => {
+    // localStorage.removeItem('patients')
+    const updatePatient = patients.filter(
+      (patient) => patient.id !== Number(id),
+    );
+    setPatients(updatePatient);
+    localStorage.setItem("patients", JSON.stringify(updatePatient));
+    navigate("/grid_patients");
+  };
 
   if (loader) {
     return <div>Loading ...</div>;
@@ -243,6 +254,13 @@ function PatientDetails() {
           </div>
         </div>
       </section>
+      <button
+        onClick={handleRemove}
+        className="border mt-5 px-5 flex items-center gap-2.5 py-1.5 rounded-md bg-rose-50 text-rose-500 cursor-pointer"
+      >
+        <Trash2 size={`17`} />
+        <p>Delete</p>
+      </button>
     </main>
   );
 }
