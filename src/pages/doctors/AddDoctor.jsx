@@ -67,7 +67,6 @@ function AddDoctor() {
 
     localStorage.setItem("doctors", JSON.stringify(existingDoctors));
 
-    console.log(formData);
     navigate("/grid_doctors");
   };
 
