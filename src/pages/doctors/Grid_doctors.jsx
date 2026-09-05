@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { getDoctors } from "../../api";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Doctor from "../../components/Doctor";
 import Spinner from "../../components/Spinner";
 import {
   ClipboardClock,
   EllipsisVerticalIcon,
+  Plus,
   User,
   UserCog2Icon,
 } from "lucide-react";
@@ -13,6 +14,8 @@ import {
 function Grid_doctors() {
   const [doctors, setDoctors] = useState([]);
   const [loader, setLoader] = useState(true);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     getDoctors()
@@ -37,9 +40,15 @@ function Grid_doctors() {
       <section>
         <div className="w-full flex justify-between items-center py-2">
           <h1 className="text-[18px] font-semibold md:text-xl">Doctor Grid</h1>
-          <p className="py-1 px-2 bg-blue-50 text-[14px] border border-blue-500 text-blue-500 rounded-lg">
-            Total Doctors: {doctors.length}
-          </p>
+          <div className="flex items-center gap-2">
+            <button className="flex items-center gap-1 border px-2 py-1.5 rounded-md text-[14px] cursor-pointer bg-blue-900 text-white" onClick={() => navigate('/doctors/add')}>
+              <Plus size={`15`} />
+              <p className="">New Doctor</p>
+            </button>
+            <p className="py-1 px-2 bg-blue-50 text-[14px] border border-blue-500 text-blue-500 rounded-md">
+              Total Doctors: {doctors.length}
+            </p>
+          </div>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {doctors.map((doctor) => (

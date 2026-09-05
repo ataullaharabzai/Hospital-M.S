@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams, NavLink, useNavigate } from "react-router-dom";
 import { getDoctors } from "../../api";
 import {
   ChevronLeft,
@@ -14,12 +14,16 @@ import {
   Droplet,
   BriefcaseBusiness,
   UserRound,
-} from "lucide-react"; 
+  Delete,
+  Trash2,
+} from "lucide-react";
 
 function DoctorDetails() {
-  const [doctors, setDoctors] = useState([]);
+  const existingDoctors = JSON.parse(localStorage.getItem("doctors")) || [];
+  const [doctors, setDoctors] = useState(existingDoctors);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getDoctors()
@@ -53,6 +57,11 @@ function DoctorDetails() {
       </main>
     );
   }
+
+  const removeDoctor = () => {
+    localStorage.removeItem("doctors");
+    navigate("/grid_doctors");
+  };
 
   return (
     <main className="w-full p-3 sm:p-5 lg:p-6 dark:bg-slate-950">
@@ -269,6 +278,13 @@ function DoctorDetails() {
           </div>
         </div>
       </section>
+      <button
+        onClick={removeDoctor}
+        className="border px-2 py-1.5 flex items-center gap-2 mt-5 bg-rose-50 text-rose-500 border-rose-500 rounded-md text-[14px] cursor-pointer hover:bg-rose-100 transition-all"
+      >
+        <Trash2 size={`15`} />
+        <p>Delete Doctor</p>
+      </button>
     </main>
   );
 }
