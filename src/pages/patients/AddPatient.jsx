@@ -85,10 +85,10 @@ function AddPatient() {
   }, []);
 
   return (
-    <div className="p-6">
+    <div className="p-6 bg-slate-50 dark:bg-slate-900/90 text-slate-900 dark:text-slate-100 min-h-screen">
       <h1 className="mb-2 text-2xl font-semibold">Add Patient</h1>
 
-      <p className="mb-6 text-gray-500">
+      <p className="mb-6 text-sm text-slate-500 dark:text-slate-400">
         Add a new patient to the hospital system.
       </p>
 
@@ -199,7 +199,6 @@ function AddPatient() {
         <section>
           <h2 className="mb-4 text-lg font-semibold">Vitals</h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            
             <Input
               name="disease"
               placeholder="Disease"
@@ -365,21 +364,21 @@ function AddPatient() {
         </section>
 
         {/* Actions */}
-        <div className="flex justify-end gap-3">
+        <div className="flex flex-col sm:flex-row sm:justify-end gap-3">
           <button
             type="button"
             onClick={() => navigate("/doctors")}
-            className="rounded-lg border p-2 flex items-center gap-2 bg-rose-50 text-rose-500 hover:bg-rose-100 transition-all cursor-pointer hover:ring-2 ring-rose-300/50"
+            className="rounded-lg border p-2 flex items-center gap-2 bg-rose-50 text-rose-600 hover:bg-rose-100 transition-all hover:ring-2 ring-rose-300/30 dark:bg-rose-900/30 dark:text-rose-300 dark:hover:bg-rose-800/40"
           >
-            <X size={`17`} />
+            <X size={17} />
             <p className="text-[15px]">Cancel</p>
           </button>
 
           <button
             type="submit"
-            className="rounded-lg bg-blue-50 hover:bg-blue-100 border border-blue-600 text-blue-800 px-3 py-2 hover:text-blue-600 transition-all flex items-center gap-2 cursor-pointer hover:ring-2 ring-blue-300/50"
+            className="rounded-lg bg-blue-700 hover:bg-blue-600 border border-blue-600 text-white px-3 py-2 hover:text-white transition-all flex items-center gap-2 cursor-pointer hover:ring-2 ring-blue-300/40 dark:bg-blue-600 dark:hover:bg-blue-500"
           >
-            <Plus size={`17`} />
+            <Plus size={17} />
             <p className="text-[15px]">Add Patient</p>
           </button>
         </div>
