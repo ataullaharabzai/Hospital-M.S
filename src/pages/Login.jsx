@@ -5,7 +5,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../api.js";
 import Button from "../components/Button.jsx";
-import { LogIn, Loader2, AwardIcon, Flag } from "lucide-react";
+import {
+  LogIn,
+  Loader2,
+  AwardIcon,
+  Flag,
+  AlertCircle,
+  CheckCircle,
+} from "lucide-react";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -14,6 +21,9 @@ function Login() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [emptyMessage, setEmptyMessage] = useState("");
+  const [unUthMsg, setUnUthMsg] = useState("");
+  const [successLogin, setSuccessLogin] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -42,11 +52,15 @@ function Login() {
       );
 
       if (!user) {
-        alert("Invalid email or password");
+        setUnUthMsg("Invalid email or password");
         return;
       }
 
       localStorage.setItem("user", JSON.stringify(user));
+
+      setSuccessLogin('Login successful')
+
+      await new Promise((resolve) => setTimeout(resolve, 2000))
 
       if (user.role === "admin") {
         navigate("/sidebar");
@@ -55,7 +69,6 @@ function Login() {
       if (user.role === "doctor") {
         navigate("/doctors");
       }
-
     } catch (error) {
       console.log(error.message);
     } finally {
@@ -67,7 +80,7 @@ function Login() {
     e.preventDefault();
 
     if (!formData.email.trim() || !formData.password.trim()) {
-      alert("Please enter email and password to login");
+      setEmptyMessage("Please enter email and password");
       return;
     }
 
@@ -76,6 +89,12 @@ function Login() {
 
   return (
     <main className="flex justify-evenly items-center bg-gray-100">
+      {successLogin && (
+        <div className="flex items-center gap-3 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700 fixed top-5">
+          <CheckCircle size={`18`} />
+          <p className="text-[14px]">{successLogin}</p>
+        </div>
+      )}
       {/* Thumbnail section */}
       <section className="hidden lg:block left-side-thumbnail w-1/2">
         <Avatar src={hero} alt={`Hero Image`} className={`w-full h-screen`} />
@@ -86,17 +105,33 @@ function Login() {
         <div className="p-2 flex justify-center items-start flex-col gap-5">
           <h1 className="md:text-2xl font-semibold text-blue-700">Medicare</h1>
           <div>
-            <h1 className="md:text-[20px] font-semibold dark:text-slate-800">Login</h1>
+            <h1 className="md:text-[20px] font-semibold dark:text-slate-800">
+              Login
+            </h1>
             <p className="text-[12px] md:text-[14px] text-gray-500">
               Enter your credentials to login to your account
             </p>
+            {unUthMsg && (
+              <p className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600 mt-3">
+                <AlertCircle size={`17`} />
+                {unUthMsg}
+              </p>
+            )}
+            {emptyMessage && (
+              <p className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600 mt-3">
+                <AlertCircle size={`17`} />
+                {emptyMessage}
+              </p>
+            )}
           </div>
           <form
             onSubmit={handleSubmit}
             className="w-full flex justify-center items-start gap-3 flex-col"
           >
             <div className="w-full">
-              <label className="text-[12px] md:text-[14px] dark:text-slate-800">Email</label>
+              <label className="text-[12px] md:text-[14px] dark:text-slate-800">
+                Email
+              </label>
               <Input
                 placeholder={`admin@example.com`}
                 type={"email"}
@@ -107,7 +142,9 @@ function Login() {
               />
             </div>
             <div className="w-full">
-              <label className="text-[12px] md:text-[14px] dark:text-slate-800">Password</label>
+              <label className="text-[12px] md:text-[14px] dark:text-slate-800">
+                Password
+              </label>
               <Input
                 type={"password"}
                 placeholder={`******`}
