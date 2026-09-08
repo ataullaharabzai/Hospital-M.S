@@ -46,7 +46,7 @@ function ListAppointments() {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center gap-3">
           <div className="w-full md:w-64">
             <Input
               className="w-full"
@@ -56,9 +56,9 @@ function ListAppointments() {
             />
           </div>
 
-          <button className="flex items-center gap-2 border px-3 py-2 bg-blue-700 text-white hover:bg-blue-600 transition-all rounded-md">
+          <button className="w-full flex items-center justify-center gap-2 border px-3 py-2 bg-blue-700 text-white hover:bg-blue-600 transition-all rounded-md">
             <Plus size={15} />
-            <span className="text-sm">New Appointment</span>
+            <span className="md:text-sm text-[12px]">New Appointment</span>
           </button> 
         </div>
       </header>
