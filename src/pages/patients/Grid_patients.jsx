@@ -20,7 +20,7 @@ function Grid_patients() {
         </h1>
         <div className="flex items-center gap-3">
           <button
-            className="flex items-center gap-1 border px-2.5 py-2 cursor-pointer rounded-md bg-blue-900 text-white"
+            className="flex items-center gap-1 border px-2.5 py-2 cursor-pointer rounded-md bg-blue-900 text-white dark:border-blue-900"
             onClick={() => navigate("/patients/add")}
           >
             <Plus size={`17`} />

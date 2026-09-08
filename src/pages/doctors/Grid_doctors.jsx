@@ -41,7 +41,7 @@ function Grid_doctors() {
         <div className="w-full flex justify-between items-center py-2">
           <h1 className="text-[18px] font-semibold md:text-xl">Doctor Grid</h1>
           <div className="flex items-center gap-2">
-            <button className="flex items-center gap-1 border px-2 py-1.5 rounded-md text-[14px] cursor-pointer bg-blue-900 text-white" onClick={() => navigate('/doctors/add')}>
+            <button className="flex items-center gap-1 border px-2 py-1.5 rounded-md text-[14px] cursor-pointer bg-blue-900 text-white dark:border-blue-900" onClick={() => navigate('/doctors/add')}>
               <Plus size={`15`} />
               <p className="">New Doctor</p>
             </button>
