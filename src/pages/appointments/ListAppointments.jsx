@@ -59,7 +59,7 @@ function ListAppointments() {
           <button className="flex items-center gap-2 border px-3 py-2 bg-blue-700 text-white hover:bg-blue-600 transition-all rounded-md">
             <Plus size={15} />
             <span className="text-sm">New Appointment</span>
-          </button>
+          </button> 
         </div>
       </header>
 
