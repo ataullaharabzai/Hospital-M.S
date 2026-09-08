@@ -10,18 +10,29 @@ import {
   User,
   UserCog2Icon,
 } from "lucide-react";
+import Input from "../../components/Input";
 
 function Grid_doctors() {
   const [doctors, setDoctors] = useState([]);
   const [loader, setLoader] = useState(true);
+  const [searchItem, setSearchItem] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     getDoctors()
       .then(setDoctors)
       .finally(() => setLoader(false));
   }, []);
+
+  const filteredDoctors =
+    searchItem && searchItem.trim() !== ""
+      ? doctors.filter((doc) =>
+          [doc.name, doc.status, doc.specialization].some((field) =>
+            String(field).toLowerCase().includes(searchItem.toLowerCase()),
+          ),
+        )
+      : doctors;
 
   if (loader) {
     return (
@@ -38,20 +49,47 @@ function Grid_doctors() {
   return (
     <main>
       <section>
-        <div className="w-full flex justify-between items-center py-2">
-          <h1 className="text-[18px] font-semibold md:text-xl">Doctor Grid</h1>
-          <div className="flex items-center gap-2">
-            <button className="flex items-center gap-1 border px-2 py-1.5 rounded-md text-[14px] cursor-pointer bg-blue-900 text-white dark:border-blue-900" onClick={() => navigate('/doctors/add')}>
-              <Plus size={`15`} />
-              <p className="">New Doctor</p>
+        <div className="w-full flex flex-col gap-3 py-3 sm:flex-row sm:items-center sm:justify-between">
+          {/* Title */}
+          <h1 className="text-lg font-semibold md:text-xl shrink-0">
+            Doctor Grid
+          </h1>
+
+          {/* Actions */}
+          <div className="w-full flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-end">
+            {/* Search */}
+            <div className="w-full sm:w-48 md:w-56 lg:w-64">
+              <Input
+                value={searchItem}
+                onChange={(e) => setSearchItem(e.target.value)}
+                placeholder="Search doctors"
+              />
+            </div>
+
+            {/* New Doctor */}
+            <button
+              className="w-full sm:w-auto flex items-center justify-center gap-1
+                 border px-3 py-2 rounded-md text-sm cursor-pointer
+                 bg-blue-900 text-white dark:border-blue-900
+                 whitespace-nowrap"
+              onClick={() => navigate("/doctors/add")}
+            >
+              <Plus size={15} />
+              <span>New Doctor</span>
             </button>
-            <p className="py-1 px-2 bg-blue-50 text-[14px] border border-blue-500 text-blue-500 rounded-md">
+
+            {/* Total Doctors */}
+            <p
+              className="w-full sm:w-auto text-center py-2 px-3
+                 bg-blue-50 text-sm border border-blue-500
+                 text-blue-500 rounded-md whitespace-nowrap"
+            >
               Total Doctors: {doctors.length}
             </p>
           </div>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          {doctors.map((doctor) => (
+          {filteredDoctors.map((doctor) => (
             <div key={doctor.id}>
               <NavLink to={`/doctor_details/${doctor.id}`}>
                 <Doctor
