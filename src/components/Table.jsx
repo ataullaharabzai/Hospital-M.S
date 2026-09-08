@@ -14,7 +14,7 @@ function Table({ appointments = [], doctors = [], patients = [], title }) {
   };
 
   return (
-    <div className="mt-10 w-full rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900/90 dark:shadow-slate-950/30">
+    <div className="mt-10 w-full rounded-md border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900/90 dark:shadow-slate-950/30">
       <div className="mb-4">
         <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-800 dark:text-slate-100">
           <div className="rounded-xl bg-green-200 p-3 text-green-700">
@@ -47,7 +47,7 @@ function Table({ appointments = [], doctors = [], patients = [], title }) {
                 return (
                   <tr
                     key={appointment.id}
-                    className="bg-sky-50 dark:bg-slate-800/80"
+                    className="bg-sky-50  dark:bg-slate-800/80"
                   >
                     <td className="px-4 py-4 align-top">
                       <div className="flex items-start gap-3">
@@ -84,21 +84,21 @@ function Table({ appointments = [], doctors = [], patients = [], title }) {
                       </div>
                     </td>
                     <td className="px-4 py-4 align-top">
-                      <p className="font-medium text-slate-800 dark:text-slate-300">
+                      <p className="font-medium text-[12px] text-slate-800 dark:text-slate-300">
                         {appointment.date}
                       </p>
-                      <p className="text-sm text-slate-500 dark:text-slate-300">
+                      <p className="text-[12px] text-slate-500 dark:text-slate-300">
                         {appointment.time}
                       </p>
                     </td>
                     <td className="px-4 py-4 align-top">
-                      <span className="dark:bg-transparent dark:text-slate-300 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+                      <span className="dark:bg-transparent dark:text-slate-300 inline-flex rounded-full bg-slate-100 px-3 py-1 text-[12px] font-medium text-slate-700">
                         {appointment.mode || "Online"}
                       </span>
                     </td>
                     <td className="px-4 py-4 align-top">
                       <span
-                        className={`inline-flex rounded-full px-3 py-1 text-sm font-medium ${statusClass}`}
+                        className={`inline-flex rounded-full px-3 py-1 text-[12px] font-medium ${statusClass}`}
                       >
                         {appointment.status}
                       </span>
