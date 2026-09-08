@@ -56,7 +56,7 @@ function ListAppointments() {
             />
           </div>
 
-          <button className="w-full flex items-center justify-center gap-2 border px-3 py-2 bg-blue-700 text-white hover:bg-blue-600 transition-all rounded-md">
+          <button className="w-full flex items-center justify-center gap-2 border px-3 py-2 bg-blue-700 text-white hover:bg-blue-600 transition-all rounded-md dark:border-gray-600">
             <Plus size={15} />
             <span className="md:text-sm text-[12px]">New Appointment</span>
           </button> 
