@@ -9,7 +9,15 @@ function Grid_patients() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getPatients().then(setPatients);
+    const loadPatients = async () => {
+      const apiPatients = await getPatients();
+
+      const savedPatients = JSON.parse(localStorage.getItem("patients")) || [];
+
+      setPatients([...apiPatients, ...savedPatients]);
+    };
+
+    loadPatients();
   }, []);
 
   return (

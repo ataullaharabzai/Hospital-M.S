@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, NavLink, useNavigate } from "react-router-dom";
+import { getPatients } from "../../api";
 import {
   Activity,
   ActivityIcon,
@@ -29,9 +30,16 @@ function PatientDetails() {
   const selectedPatient = patients.find((patient) => patient.id === Number(id));
 
   useEffect(() => {
-    const savedPatients = JSON.parse(localStorage.getItem("patients")) || [];
-    setPatients(savedPatients);
-    setLoader(false);
+    const loadPatients = async () => {
+      const apiPatients = await getPatients();
+
+      const savedPatients = JSON.parse(localStorage.getItem("patients")) || [];
+
+      setPatients([...apiPatients, ...savedPatients]);
+      setLoader(false);
+    };
+
+    loadPatients();
   }, []);
 
   const handleRemove = () => {
